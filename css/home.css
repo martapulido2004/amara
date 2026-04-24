@@ -17,8 +17,8 @@ body {
 }
 
 .topbar {
-  height: 42px;
-  background: #e9dc8e;
+  height: 50px;
+  background: #f7f9df;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,7 +44,7 @@ body {
 .topbar a {
   text-decoration: none;
   color: #9d62b6;
-  font-size: 36px;
+  font-size: 20px;
   line-height: 1;
 }
 
@@ -118,13 +118,14 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 260px;
+  bottom: 0;
   height: 250px;
 }
 
 .wave-section svg {
   width: 100%;
   height: 100%;
+  overflow: visible;
 }
 
 .wave-stroke {
