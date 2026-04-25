@@ -1,3 +1,85 @@
+.topbar {
+  height: 50px;
+  background: #f7f9df;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.brand {
+  line-height: 1;
+}
+
+.brand img {
+  display: block;
+  height: 36px;
+  width: auto;
+}
+
+.topbar nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.topbar nav .menu-link {
+  --menu-color: #9d62b6;
+  text-decoration: none;
+  color: var(--menu-color);
+  font-size: 20px;
+  line-height: 1;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.topbar nav .menu-link--home {
+  --menu-color: #9d62b6;
+}
+
+.topbar nav .menu-link--taller {
+  --menu-color: #ea79bb;
+}
+
+.topbar nav .menu-link--contacto {
+  --menu-color: #66b663;
+}
+
+.topbar nav .menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s ease;
+}
+
+.topbar nav .menu-link:hover::after,
+.topbar nav .menu-link:focus-visible::after,
+.topbar nav .menu-link.active::after {
+  transform: scaleX(1);
+}
+
+.topbar nav .menu-link.active {
+  color: var(--menu-color);
+}
+
+.topbar .icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.topbar .icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
 .site-footer {
   background: #a267b2;
   color: #fff;
