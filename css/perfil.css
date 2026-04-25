@@ -1,3 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Baloo 2', system-ui, sans-serif;
+  background: #f4f2f7;
+}
+
+.topbar nav {
+  row-gap: 8px;
+}
+
+@media (max-width: 900px) {
+  .topbar nav {
+    justify-content: center;
+  }
+}
+
 .perfil-main {
   max-width: 1100px;
   margin: 40px auto 60px;
