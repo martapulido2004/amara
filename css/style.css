@@ -71,14 +71,13 @@
 
 .topbar .icon {
   display: inline-flex;
-  display: inline-flex;
 }
 
 .topbar .icon img {
   width: 24px;
   height: 24px;
   object-fit: contain;
- transition: transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .topbar .icon:hover img,

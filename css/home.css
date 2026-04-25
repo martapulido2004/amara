@@ -290,9 +290,8 @@ animation: title-float 4.5s ease-in-out infinite;
 @media (max-width: 900px) {
   .topbar a { font-size: 26px; }
   .brand { font-size: 42px; }
-  .logo-wrap h1 { font-size: 120px; }
-  
-.about-next {
+
+  .about-next {
     grid-template-columns: 1fr;
     gap: 28px;
     padding: 72px 28px 80px;
@@ -301,7 +300,7 @@ animation: title-float 4.5s ease-in-out infinite;
   .about-next__question h2 {
     line-height: 1;
   }
-}
+
 
 .topics,
   .multimedia {
@@ -312,6 +311,7 @@ animation: title-float 4.5s ease-in-out infinite;
     grid-template-columns: 1fr;
   }
 
+  .topics__grid,
   .multimedia__gallery {
     grid-template-columns: 1fr;
   }
@@ -327,4 +327,4 @@ animation: title-float 4.5s ease-in-out infinite;
   .gallery-item img {
     height: 300px;
   }
-
+}
