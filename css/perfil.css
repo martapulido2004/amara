@@ -20,35 +20,63 @@ body {
 
 .perfil-main {
   max-width: 1100px;
-  margin: 40px auto 60px;
+  margin: 34px auto 60px;
   padding: 0 20px;
 }
 
 .perfil-auth {
   display: flex;
   justify-content: center;
-  margin-bottom: 38px;
+  margin-bottom: 42px;
+  min-height: 680px;
+  padding: 32px;
+  border-radius: 28px;
+  background-image: linear-gradient(135deg, rgba(31, 19, 62, 0.65), rgba(84, 53, 138, 0.45)), url('../img/carruasel/9.jpg');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 18px 34px rgba(28, 18, 56, 0.28);
 }
 
 .auth-card {
-  width: min(680px, 100%);
-  background: #fff;
-  border: 2px solid #eddff1;
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: 0 10px 26px rgba(134, 68, 161, 0.08);
+  width: min(560px, 100%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 26px;
+  padding: 28px;
+  color: #f4f0ff;
+  background: linear-gradient(150deg, rgba(102, 79, 153, 0.45), rgba(32, 22, 62, 0.68));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 14px 40px rgba(10, 8, 28, 0.32);
+}
+
+.auth-eyebrow {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  padding: 4px 12px;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
 }
 
 .auth-card h1,
 .auth-card h2 {
-  margin: 0 0 10px;
-  color: #8c4ca4;
-  font-size: 1.8rem;
+  margin: 0 0 8px;
+  color: #fff;
 }
 
+.auth-card h1 {
+  font-size: clamp(2rem, 2.8vw, 2.7rem);
+  line-height: 1.05;
+}
+
+.auth-card h2 {
+  font-size: 1.7rem;
+}
+
+
 .auth-card p {
-  margin: 0 0 16px;
-  color: #5f5f5f;
+  margin: 0 0 15px;
+  color: rgba(245, 239, 255, 0.92);
 }
 
 .auth-form {
@@ -65,7 +93,8 @@ body {
   display: inline-flex;
   gap: 8px;
   padding: 6px;
-  background: #f5ecf8;
+  background: rgba(221, 202, 255, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 999px;
   margin-bottom: 18px;
 }
@@ -73,7 +102,7 @@ body {
 .auth-tab {
   border: 0;
   background: transparent;
-  color: #88539b;
+  color: #f3ecff;
   border-radius: 999px;
   font-family: inherit;
   font-weight: 700;
@@ -84,18 +113,18 @@ body {
 }
 
 .auth-tab.is-active {
-  background: #9d62b6;
+  background: rgba(255, 255, 255, 0.28);
   color: #fff;
 }
 
 .auth-tab:not(.is-active):hover {
   transform: translateY(-1px);
-  background: #ead9f0;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .auth-panels {
   position: relative;
-  min-height: 370px;
+ min-height: 330px;
 }
 
 .auth-panel {
@@ -118,16 +147,51 @@ body {
 }
 
 .auth-form label {
-  color: #7a3e91;
+  color: #f5efff;;
   font-weight: 600;
 }
 
 .auth-form input {
-  border: 1px solid #d9bddf;
-  border-radius: 12px;
-  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 14px;
+  padding: 12px 13px;
   font-size: 1rem;
   font-family: inherit;
+  color: #fff;
+  background: rgba(31, 20, 56, 0.35);
+}
+
+.auth-form input::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.auth-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 2px;
+}
+
+.check-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.95rem;
+}
+
+.check-row input {
+  accent-color: #f6d5ff;
+}
+
+.auth-link {
+  color: #fbe9ff;
+  text-decoration: none;
+  font-size: 0.94rem;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
 }
 
 .auth-form button,
@@ -135,11 +199,11 @@ body {
   margin-top: 8px;
   border: none;
   border-radius: 999px;
-  background: #9d62b6;
-  color: #fff;
+  background: #fff;
+  color: #241a45;
   font-weight: 700;
   font-family: inherit;
-  padding: 11px 16px;
+  padding: 12px 16px;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
@@ -149,12 +213,22 @@ body {
 .auth-form button:hover,
 .plan-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(100, 47, 121, 0.25);
+  box-shadow: 0 10px 22px rgba(13, 10, 31, 0.35);
 }
 
 @media (max-width: 640px) {
+
+  .perfil-main {
+    margin-top: 24px;
+  }
+
+  .perfil-auth {
+    padding: 18px;
+    min-height: 620px;
+  }
+
   .auth-card {
-    padding: 20px;
+    padding: 22px;
   }
 
   .auth-switcher-tabs {
@@ -167,6 +241,10 @@ body {
 
   .auth-panels {
     min-height: 400px;
+  }
+  .auth-row {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 

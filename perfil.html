@@ -29,8 +29,9 @@
     <section class="perfil-auth" aria-label="Acceso y registro">
       <article class="auth-card auth-card--switcher" data-auth-switcher>
         <header class="auth-switcher-header">
-          <h1>Tu cuenta Amara</h1>
-          <p>Elige si quieres iniciar sesión o registrarte.</p>
+           <p class="auth-eyebrow">Amara</p>
+          <h1>¡Qué bueno verte!</h1>
+          <p>Inicia sesión o regístrate para guardar tus casas favoritas y avanzar en tu compra.</p>
         </header>
 
           <div class="auth-switcher-tabs" role="tablist" aria-label="Opciones de acceso">
@@ -45,27 +46,33 @@
           <div class="auth-panels">
           <section class="auth-panel is-active" id="panel-login" role="tabpanel" aria-labelledby="tab-login" data-auth-panel="login">
             <h2>Iniciar sesión</h2>
-            <p>Accede para guardar tus casas favoritas y seguir tu proceso de compra.</p>
             <form class="auth-form" action="#" method="post">
-              <label for="login-email">Correo electrónico</label>
-              <input id="login-email" name="email" type="email" placeholder="tu@correo.com" required>
+              <label for="login-email">Email</label>
+              <input id="login-email" name="email" type="email" placeholder="Ingresa tu email" required>
 
               <label for="login-password">Contraseña</label>
               <input id="login-password" name="password" type="password" placeholder="••••••••" required>
+              <div class="auth-row">
+                <label class="check-row" for="remember-me">
+                  <input id="remember-me" type="checkbox" name="remember">
+                  <span>Recordarme</span>
+                </label>
+                <a href="#" class="auth-link">¿Olvidaste tu contraseña?</a>
+              </div>
 
               <button type="submit">Entrar</button>
             </form>
           </section>
 
-      section class="auth-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register" aria-hidden="true" data-auth-panel="register">
-            <h2>Regístrate</h2>
+        <section class="auth-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register" aria-hidden="true" data-auth-panel="register">
+           <h2>Regístrate</h2>
             <p>Crea una cuenta y elige el plan que mejor se adapte a ti.</p>
             <form class="auth-form" action="#" method="post">
               <label for="register-name">Nombre completo</label>
               <input id="register-name" name="name" type="text" placeholder="Tu nombre" required>
 
-         <label for="register-email">Correo electrónico</label>
-              <input id="register-email" name="email" type="email" placeholder="tu@correo.com" required>
+          <label for="register-email">Email</label>
+              <input id="register-email" name="email" type="email" placeholder="Ingresa tu email" required>
 
 
            <label for="register-password">Contraseña</label>
