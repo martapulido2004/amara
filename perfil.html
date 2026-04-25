@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/perfil.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,7 +24,83 @@
     </nav>
   </header>
 
-  <main></main>
+ 
+    <main class="perfil-main">
+    <section class="perfil-auth" aria-label="Acceso y registro">
+      <article class="auth-card">
+        <h1>Iniciar sesión</h1>
+        <p>Accede para guardar tus casas favoritas y seguir tu proceso de compra.</p>
+        <form class="auth-form" action="#" method="post">
+          <label for="login-email">Correo electrónico</label>
+          <input id="login-email" name="email" type="email" placeholder="tu@correo.com" required>
+
+          <label for="login-password">Contraseña</label>
+          <input id="login-password" name="password" type="password" placeholder="••••••••" required>
+
+          <button type="submit">Entrar</button>
+        </form>
+      </article>
+
+      <article class="auth-card">
+        <h2>Regístrate</h2>
+        <p>Crea una cuenta y elige el plan que mejor se adapte a ti.</p>
+        <form class="auth-form" action="#" method="post">
+          <label for="register-name">Nombre completo</label>
+          <input id="register-name" name="name" type="text" placeholder="Tu nombre" required>
+
+          <label for="register-email">Correo electrónico</label>
+          <input id="register-email" name="email" type="email" placeholder="tu@correo.com" required>
+
+          <label for="register-password">Contraseña</label>
+          <input id="register-password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+
+          <button type="submit">Crear cuenta</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="planes" aria-label="Planes de membresía">
+      <h2>Planes de registro</h2>
+      <p class="planes-subtitle">Desde una opción gratuita hasta planes Plus y Premium con acceso a más casas.</p>
+
+      <div class="planes-grid">
+        <article class="plan-card plan-card--free">
+          <h3>Gratis</h3>
+          <p class="plan-price">$0 / mes</p>
+          <ul>
+            <li>Acceso básico al catálogo</li>
+            <li>Guardar hasta 5 casas favoritas</li>
+            <li>Notificaciones semanales</li>
+          </ul>
+          <a href="#" class="plan-button">Elegir Gratis</a>
+        </article>
+
+        <article class="plan-card plan-card--plus">
+          <span class="plan-badge">Popular</span>
+          <h3>Plus</h3>
+          <p class="plan-price">$12 / mes</p>
+          <ul>
+            <li>Acceso a más casas destacadas</li>
+            <li>Guardar hasta 25 casas favoritas</li>
+            <li>Alertas diarias de nuevas propiedades</li>
+          </ul>
+          <a href="#" class="plan-button">Elegir Plus</a>
+        </article>
+
+        <article class="plan-card plan-card--premium">
+          <h3>Premium</h3>
+          <p class="plan-price">$25 / mes</p>
+          <ul>
+            <li>Acceso completo a todas las casas</li>
+            <li>Favoritos ilimitados</li>
+            <li>Asesoría personalizada y prioridad</li>
+          </ul>
+          <a href="#" class="plan-button">Elegir Premium</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  
 
   <footer>
     <script src="js/script.js"></script>
