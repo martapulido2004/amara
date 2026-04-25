@@ -1,10 +1,18 @@
+:root {
+  --menu-home: #9d62b6;
+  --menu-taller: #ea79bb;
+  --menu-contacto: #66b663;
+}
+
 .topbar {
-  height: 50px;
+  min-height: 50px;
   background: #f7f9df;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+  font-family: "Baloo 2", system-ui, sans-serif;
+  gap: 16px;
 }
 
 .brand {
@@ -20,29 +28,34 @@
 .topbar nav {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: clamp(14px, 2.2vw, 30px);
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .topbar nav .menu-link {
-  --menu-color: #9d62b6;
+  --menu-color: var(--menu-home);
   text-decoration: none;
   color: var(--menu-color);
-  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 0.2px;
   line-height: 1;
   position: relative;
   padding-bottom: 8px;
 }
 
 .topbar nav .menu-link--home {
-  --menu-color: #9d62b6;
+ --menu-color: var(--menu-home);
 }
 
 .topbar nav .menu-link--taller {
-  --menu-color: #ea79bb;
+  --menu-color: var(--menu-taller);
 }
 
 .topbar nav .menu-link--contacto {
-  --menu-color: #66b663;
+  --menu-color: var(--menu-contacto);
 }
 
 .topbar nav .menu-link::after {
@@ -71,6 +84,8 @@
 
 .topbar .icon {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .topbar .icon img {
@@ -78,6 +93,13 @@
   height: 24px;
   object-fit: contain;
   transition: transform 0.2s ease;
+}
+
+.topbar .icon:focus-visible,
+.topbar nav .menu-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 .topbar .icon:hover img,
@@ -122,4 +144,39 @@
 
 .footer-contact p {
   margin: 4px 0;
+}
+
+
+@media (max-width: 900px) {
+  .topbar {
+    padding: 10px 16px;
+    align-items: flex-start;
+  }
+
+  .topbar nav .menu-link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .topbar nav {
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .topbar nav .menu-link {
+    font-size: 17px;
+    padding-bottom: 4px;
+  }
+
+  .topbar .icon img {
+    width: 22px;
+    height: 22px;
+  }
 }
