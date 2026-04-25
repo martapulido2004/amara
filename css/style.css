@@ -71,13 +71,20 @@
 
 .topbar .icon {
   display: inline-flex;
-  align-items: center;
+  display: inline-flex;
 }
 
 .topbar .icon img {
   width: 24px;
   height: 24px;
   object-fit: contain;
+ transition: transform 0.2s ease;
+}
+
+.topbar .icon:hover img,
+.topbar .icon:focus-visible img,
+.topbar .icon.active img {
+  transform: scale(0.85);
 }
 
 .site-footer {
