@@ -59,7 +59,14 @@ body {
 }
 
 .topbar .icon {
-  color: #f1bb49;
+display: inline-flex;
+  align-items: center;
+}
+
+.topbar .icon img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .hero {
@@ -120,11 +127,13 @@ body {
   right: 0;
   bottom: 0;
   height: 250px;
+  overflow: hidden;
 }
 
 .wave-section svg {
-  width: 100%;
-  height: 100%;
+  width: calc(100% + 220px);
+  height: 112%;
+  margin-left: -110px;
   overflow: visible;
 }
 
@@ -142,8 +151,52 @@ body {
   letter-spacing: 0.4px;
 }
 
+.about-next {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+  padding: 96px 90px 110px;
+  background: #dfe3a4;
+}
+
+.about-next__question h2 {
+  margin: 0;
+  color: #989019;
+  font-family: "Gochi Hand", cursive;
+  font-size: clamp(70px, 10vw, 500px);
+  line-height: 0.92;
+  letter-spacing: 1px;
+}
+
+.about-next__content {
+  max-width: 620px;
+  color: #101010;
+}
+
+.about-next__content p {
+  margin: 0 0 26px;
+  font-size: clamp(24px, 2.5vw, 10px);
+  font-family: helvetica;
+  line-height: 1.18;
+}
+
+.about-next__content p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 900px) {
   .topbar a { font-size: 26px; }
   .brand { font-size: 42px; }
   .logo-wrap h1 { font-size: 120px; }
+  
+.about-next {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 72px 28px 80px;
+  }
+
+  .about-next__question h2 {
+    line-height: 1;
+  }
 }
