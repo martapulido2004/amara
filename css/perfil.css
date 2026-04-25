@@ -25,13 +25,13 @@ body {
 }
 
 .perfil-auth {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+  display: flex;
+  justify-content: center;
   margin-bottom: 38px;
 }
 
 .auth-card {
+  width: min(680px, 100%);
   background: #fff;
   border: 2px solid #eddff1;
   border-radius: 20px;
@@ -55,6 +55,66 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.auth-switcher-header p {
+  margin-bottom: 18px;
+}
+
+.auth-switcher-tabs {
+  display: inline-flex;
+  gap: 8px;
+  padding: 6px;
+  background: #f5ecf8;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.auth-tab {
+  border: 0;
+  background: transparent;
+  color: #88539b;
+  border-radius: 999px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.auth-tab.is-active {
+  background: #9d62b6;
+  color: #fff;
+}
+
+.auth-tab:not(.is-active):hover {
+  transform: translateY(-1px);
+  background: #ead9f0;
+}
+
+.auth-panels {
+  position: relative;
+  min-height: 370px;
+}
+
+.auth-panel {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(22px) scale(0.98);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.auth-panel.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0) scale(1);
+}
+
+.auth-panel[aria-hidden="true"] {
+  visibility: hidden;
 }
 
 .auth-form label {
@@ -90,6 +150,24 @@ body {
 .plan-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(100, 47, 121, 0.25);
+}
+
+@media (max-width: 640px) {
+  .auth-card {
+    padding: 20px;
+  }
+
+  .auth-switcher-tabs {
+    width: 100%;
+  }
+
+  .auth-tab {
+    flex: 1;
+  }
+
+  .auth-panels {
+    min-height: 400px;
+  }
 }
 
 .planes h2 {

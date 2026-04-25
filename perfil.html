@@ -27,35 +27,54 @@
  
     <main class="perfil-main">
     <section class="perfil-auth" aria-label="Acceso y registro">
-      <article class="auth-card">
-        <h1>Iniciar sesión</h1>
-        <p>Accede para guardar tus casas favoritas y seguir tu proceso de compra.</p>
-        <form class="auth-form" action="#" method="post">
-          <label for="login-email">Correo electrónico</label>
-          <input id="login-email" name="email" type="email" placeholder="tu@correo.com" required>
+      <article class="auth-card auth-card--switcher" data-auth-switcher>
+        <header class="auth-switcher-header">
+          <h1>Tu cuenta Amara</h1>
+          <p>Elige si quieres iniciar sesión o registrarte.</p>
+        </header>
 
-          <label for="login-password">Contraseña</label>
-          <input id="login-password" name="password" type="password" placeholder="••••••••" required>
+          <div class="auth-switcher-tabs" role="tablist" aria-label="Opciones de acceso">
+          <button type="button" class="auth-tab is-active" role="tab" aria-selected="true" aria-controls="panel-login" id="tab-login" data-auth-target="login">
+            Iniciar sesión
+          </button>
+          <button type="button" class="auth-tab" role="tab" aria-selected="false" aria-controls="panel-register" id="tab-register" data-auth-target="register">
+            Registrarte
+          </button>
+        </div>
 
-          <button type="submit">Entrar</button>
-        </form>
-      </article>
+          <div class="auth-panels">
+          <section class="auth-panel is-active" id="panel-login" role="tabpanel" aria-labelledby="tab-login" data-auth-panel="login">
+            <h2>Iniciar sesión</h2>
+            <p>Accede para guardar tus casas favoritas y seguir tu proceso de compra.</p>
+            <form class="auth-form" action="#" method="post">
+              <label for="login-email">Correo electrónico</label>
+              <input id="login-email" name="email" type="email" placeholder="tu@correo.com" required>
 
-      <article class="auth-card">
-        <h2>Regístrate</h2>
-        <p>Crea una cuenta y elige el plan que mejor se adapte a ti.</p>
-        <form class="auth-form" action="#" method="post">
-          <label for="register-name">Nombre completo</label>
-          <input id="register-name" name="name" type="text" placeholder="Tu nombre" required>
+              <label for="login-password">Contraseña</label>
+              <input id="login-password" name="password" type="password" placeholder="••••••••" required>
 
-          <label for="register-email">Correo electrónico</label>
-          <input id="register-email" name="email" type="email" placeholder="tu@correo.com" required>
+              <button type="submit">Entrar</button>
+            </form>
+          </section>
 
-          <label for="register-password">Contraseña</label>
-          <input id="register-password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+      section class="auth-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register" aria-hidden="true" data-auth-panel="register">
+            <h2>Regístrate</h2>
+            <p>Crea una cuenta y elige el plan que mejor se adapte a ti.</p>
+            <form class="auth-form" action="#" method="post">
+              <label for="register-name">Nombre completo</label>
+              <input id="register-name" name="name" type="text" placeholder="Tu nombre" required>
 
-          <button type="submit">Crear cuenta</button>
-        </form>
+         <label for="register-email">Correo electrónico</label>
+              <input id="register-email" name="email" type="email" placeholder="tu@correo.com" required>
+
+
+           <label for="register-password">Contraseña</label>
+              <input id="register-password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+          
+              <button type="submit">Crear cuenta</button>
+            </form>
+          </section>
+        </div>
       </article>
     </section>
 
