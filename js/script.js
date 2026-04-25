@@ -1,18 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const menuLinks = Array.from(
-    document.querySelectorAll(".topbar nav a:not(.icon)")
-  );
-  const currentPath = window.location.pathname.split("/").pop() || "home.html";
-  const currentPage = currentPath === "" ? "home.html" : currentPath;
-
-  menuLinks.forEach((link) => {
-    const href = link.getAttribute("href");
-    const isHomeAlias =
-      (currentPage === "index.html" || currentPage === "") && href === "home.html";
-    const isActive = href === currentPage || isHomeAlias;
-    link.classList.toggle("active", isActive);
-  });
   
   const slides = Array.from(document.querySelectorAll(".hero-slide"));
   if (slides.length > 1) {
