@@ -20,21 +20,32 @@ body {
 
 .perfil-main {
   max-width: 1100px;
-  margin: 34px auto 60px;
+  margin: 0 auto 60px;
   padding: 0 20px;
 }
 
 .perfil-auth {
+  --perfil-bg-login: url('../img/carruasel/9.jpg');
+  --perfil-bg-register: url('../img/carruasel/14.jpg');
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 42px;
-  min-height: 680px;
-  padding: 32px;
-  border-radius: 28px;
-  background-image: linear-gradient(135deg, rgba(31, 19, 62, 0.65), rgba(84, 53, 138, 0.45)), url('../img/carruasel/9.jpg');
+  min-height: calc(100vh - 86px);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 32px 20px;
+  border-radius: 0;
+  background-image: linear-gradient(135deg, rgba(31, 19, 62, 0.65), rgba(84, 53, 138, 0.45)), var(--perfil-bg-login);
   background-size: cover;
   background-position: center;
-  box-shadow: 0 18px 34px rgba(28, 18, 56, 0.28);
+  box-shadow: none;
+  transition: background-image 0.35s ease-in-out;
+}
+
+.perfil-auth.is-register {
+  background-image: linear-gradient(135deg, rgba(31, 19, 62, 0.65), rgba(84, 53, 138, 0.45)), var(--perfil-bg-register);
 }
 
 .auth-card {
@@ -46,6 +57,11 @@ body {
   background: linear-gradient(150deg, rgba(102, 79, 153, 0.45), rgba(32, 22, 62, 0.68));
   backdrop-filter: blur(8px);
   box-shadow: 0 14px 40px rgba(10, 8, 28, 0.32);
+  transition: width 0.3s ease, max-width 0.3s ease;
+}
+
+.auth-card.is-register-mode {
+  width: min(760px, 100%);
 }
 
 .auth-eyebrow {
@@ -127,6 +143,10 @@ body {
  min-height: 330px;
 }
 
+.auth-card.is-register-mode .auth-panels {
+  min-height: 520px;
+}
+
 .auth-panel {
   position: absolute;
   inset: 0;
@@ -163,6 +183,36 @@ body {
 
 .auth-form input::placeholder {
   color: rgba(255, 255, 255, 0.65);
+}
+
+.subscription-options {
+  margin: 10px 0 4px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 14px;
+  display: grid;
+  gap: 8px;
+  background: rgba(31, 20, 56, 0.3);
+}
+
+.subscription-options legend {
+  padding: 0 6px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.subscription-option {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 10px;
+  padding: 9px 10px;
+}
+
+.subscription-option input {
+  margin: 0;
+  accent-color: #f6d5ff;
 }
 
 .auth-row {
@@ -217,10 +267,6 @@ body {
 }
 
 @media (max-width: 640px) {
-
-  .perfil-main {
-    margin-top: 24px;
-  }
 
   .perfil-auth {
     padding: 18px;
