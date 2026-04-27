@@ -19,8 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const speed = 2.2;
   const textSeparation = 71.5;
-  let offset = 0;
+  const initialOffset = 38;
+  let offset = initialOffset;
   let lastTimestamp = null;
+
+  waveTexts.forEach((textPath, index) => {
+    const loopOffset = initialOffset - (index * textSeparation);
+    textPath.setAttribute("startOffset", `${loopOffset}%`);
+  });
 
   const animateWaveText = (timestamp) => {
     if (lastTimestamp === null) {
