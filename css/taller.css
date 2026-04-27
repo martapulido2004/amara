@@ -1,10 +1,13 @@
 :root {
-  --fondo: #f3f0ea;
-  --lila: #b07ac5;
-  --lila-oscuro: #7d4d93;
-  --rosa: #f3d9e7;
-  --verde: #dbeacb;
-  --texto: #2a2630;
+  --amarillo-logo-amara: #ebdc86;
+  --brand-rosa-claro: #ecb5d4;
+  --brand-celeste-claro: #acdbe6;
+  --brand-amarillo: #f6e81d;
+  --brand-verde-claro: #b6d056;
+  --brand-fucsia: #d44190;
+  --brand-celeste: #6baee0;
+  --brand-naranja: #f6a117;
+  --brand-verde: #72b62b;
 }
 
 * {

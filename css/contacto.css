@@ -1,8 +1,13 @@
 :root {
-  --contact-bg: #f4fafb;
-  --contact-primary: #4e95a0;
-  --contact-secondary: #d5edf1;
-  --contact-text: #1d3438;
+  --amarillo-logo-amara: #ebdc86;
+  --brand-rosa-claro: #ecb5d4;
+  --brand-celeste-claro: #acdbe6;
+  --brand-amarillo: #f6e81d;
+  --brand-verde-claro: #b6d056;
+  --brand-fucsia: #d44190;
+  --brand-celeste: #6baee0;
+  --brand-naranja: #f6a117;
+  --brand-verde: #72b62b;
 }
 
 body {
