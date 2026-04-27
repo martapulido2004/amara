@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const tabs = Array.from(switcher.querySelectorAll("[data-auth-target]"));
   const panels = Array.from(switcher.querySelectorAll("[data-auth-panel]"));
+  const authSection = switcher.closest(".perfil-auth");
 
   const activate = (target) => {
     tabs.forEach((tab) => {
@@ -61,11 +62,24 @@ document.addEventListener("DOMContentLoaded", () => {
       panel.classList.toggle("is-active", isActive);
       panel.setAttribute("aria-hidden", String(!isActive));
     });
+
+    if (authSection) {
+      authSection.classList.toggle("is-register", target === "register");
+      authSection.classList.toggle("is-login", target === "login");
+    }
+
+    switcher.classList.toggle("is-register-mode", target === "register");
   };
+  
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => activate(tab.dataset.authTarget));
   });
+
+  const activeTab = tabs.find((tab) => tab.classList.contains("is-active"));
+  if (activeTab) {
+    activate(activeTab.dataset.authTarget);
+  }
 
   switcher.addEventListener("keydown", (event) => {
     if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;

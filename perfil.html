@@ -74,6 +74,21 @@
           <label for="register-email">Email</label>
               <input id="register-email" name="email" type="email" placeholder="Ingresa tu email" required>
 
+               <fieldset class="subscription-options">
+                <legend>Elige tu suscripción antes de registrarte</legend>
+                <label class="subscription-option" for="plan-free">
+                  <input id="plan-free" type="radio" name="subscription" value="free" required>
+                  <span><strong>Gratis</strong> · $0/mes · Acceso básico</span>
+                </label>
+                <label class="subscription-option" for="plan-plus">
+                  <input id="plan-plus" type="radio" name="subscription" value="plus">
+                  <span><strong>Plus</strong> · $12/mes · Más casas y alertas diarias</span>
+                </label>
+                <label class="subscription-option" for="plan-premium">
+                  <input id="plan-premium" type="radio" name="subscription" value="premium">
+                  <span><strong>Premium</strong> · $25/mes · Acceso completo y prioridad</span>
+                </label>
+              </fieldset>
 
            <label for="register-password">Contraseña</label>
               <input id="register-password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
