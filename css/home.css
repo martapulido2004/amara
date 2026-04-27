@@ -106,12 +106,12 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 96px 90px 110px;
-  background: #dfe3a4;
+  background: var(--amarillo);
 }
 
 .about-next__question h2 {
   margin: 0;
-  color: #989019;
+  color: var(--rosa);
   font-family: "Gochi Hand", cursive;
   font-size: clamp(70px, 10vw, 500px);
   line-height: 0.92;
