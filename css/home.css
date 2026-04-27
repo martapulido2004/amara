@@ -91,13 +91,13 @@ body {
 
 .wave-stroke {
   fill: none;
-  stroke: var(--amarillo);
+  stroke: var(--amarillo-logo-amara);
   stroke-width: 50;
   stroke-linecap: round;
 }
 
 .wave-section text {
-  fill: #9e57ae;
+  fill: #ffffff;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.4px;
@@ -110,17 +110,17 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 96px 90px 110px;
-  background: var(--amarillo);
+  background: var(--amarillo-logo-amara);
 }
 
 .about-next__question h2 {
   margin: 0;
-  color: var(--rosa);
+  color: var(--brand-rosa-claro);
   font-family: "Gochi Hand", cursive;
   font-size: clamp(70px, 10vw, 500px);
   line-height: 0.92;
   letter-spacing: 1px;
-animation: title-float 4.5s ease-in-out infinite;
+  animation: title-float 4.5s ease-in-out infinite;
 }
 
 @keyframes title-float {
@@ -141,7 +141,7 @@ animation: title-float 4.5s ease-in-out infinite;
 
 .about-next__content {
   max-width: 620px;
-  color: #101010;
+  color: var(--brand-celeste);
 }
 
 .about-next__content p {

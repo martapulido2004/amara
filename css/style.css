@@ -12,7 +12,7 @@
 
 .topbar {
   min-height: 50px;
-  background: #f7f9df;
+  background: #ebdc8692;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +27,7 @@
 
 .brand img {
   display: block;
-  height: 36px;
+  height: 20px;
   width: auto;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .topbar nav .menu-link {
-  --menu-color: var(--menu-home);
+  --menu-color: var(--amarillo-logo-amara);
   text-decoration: none;
   color: var(--menu-color);
   font-size: 1.25rem;
@@ -53,15 +53,15 @@
 }
 
 .topbar nav .menu-link--home {
- --menu-color: var(--menu-home);
+ --menu-color: var(--brand-fucsia);
 }
 
 .topbar nav .menu-link--taller {
-  --menu-color: var(--menu-taller);
+  --menu-color: var(--brand-verde-claro);
 }
 
 .topbar nav .menu-link--contacto {
-  --menu-color: var(--menu-contacto);
+  --menu-color: var(--brand-rosa-claro);
 }
 
 .topbar nav .menu-link::after {
