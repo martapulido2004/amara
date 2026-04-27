@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/contacto.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,7 +24,82 @@
     </nav>
   </header>
 
-  <main></main>
+  
+    <main class="contact-page">
+    <section class="contact-hero" aria-labelledby="contact-title">
+      <p class="contact-hero__kicker">Amara Wellness Studio</p>
+      <h1 id="contact-title">Contáctanos</h1>
+      <p class="contact-hero__copy">Cuéntanos cómo te gustaría vivir tu proceso creativo y te ayudamos a elegir la experiencia ideal.</p>
+    </section>
+
+    <section class="partners" aria-label="Marcas aliadas">
+      <span>logomind</span>
+      <span>artspace</span>
+      <span>calm studio</span>
+      <span>wellbeing lab</span>
+    </section>
+
+    <section class="contact-layout" aria-label="Formulario de contacto y newsletter">
+      <form class="contact-form">
+        <div class="contact-form__split">
+          <label>
+            <span>Correo electrónico</span>
+            <input type="email" name="email" placeholder="ejemplo@email.com" required>
+          </label>
+          <label>
+            <span>Teléfono</span>
+            <input type="tel" name="telefono" placeholder="+52 55 1234 5678" required>
+          </label>
+        </div>
+        <label>
+          <span>Nombre</span>
+          <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+        </label>
+        <label>
+          <span>Mensaje</span>
+          <textarea name="mensaje" rows="5" placeholder="¿Qué taller, terapia o experiencia te interesa?"></textarea>
+        </label>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+
+      <aside class="newsletter" aria-label="Suscripción al boletín">
+        <h2>Nuestro newsletter</h2>
+        <p>Recibe tips de autocuidado, ejercicios creativos y próximas fechas de talleres.</p>
+        <label>
+          <span>Correo</span>
+          <input type="email" placeholder="tu correo" aria-label="Correo para newsletter">
+        </label>
+        <button type="button">Suscribirme</button>
+      </aside>
+    </section>
+
+    <section class="contact-cards" aria-label="Información de contacto">
+      <article class="info-card info-card--highlight">
+        <h3>Teléfono</h3>
+        <p class="info-card__lead">(+52) 55 765 665</p>
+        <p>Lun a vie · 9:00 a 18:00 h</p>
+      </article>
+      <article class="info-card">
+        <h3>Correo</h3>
+        <p class="info-card__lead">hola@amara.mx</p>
+        <p>Respuesta promedio en menos de 24 horas.</p>
+      </article>
+      <article class="info-card info-card--plain">
+        <h3>Dirección</h3>
+        <p class="info-card__lead">Roma Norte, CDMX</p>
+        <p>Visitas con cita previa para sesiones presenciales.</p>
+      </article>
+    </section>
+
+    <section class="map-wrapper" aria-label="Ubicación en mapa">
+      <iframe
+        title="Mapa de ubicación de Amara"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-99.1749%2C19.4100%2C-99.1472%2C19.4328&amp;layer=mapnik"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+ 
 
   <footer>
     <script src="js/script.js"></script>
