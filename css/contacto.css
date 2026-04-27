@@ -26,14 +26,6 @@ body {
   text-align: center;
 }
 
-.contact-hero__kicker {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #5f8f98;
-  font-size: 14px;
-}
-
 .contact-hero h1 {
   margin: 8px 0 14px;
   font-size: clamp(44px, 7vw, 86px);
@@ -46,22 +38,6 @@ body {
   margin: 0 auto;
   font-size: 20px;
   line-height: 1.2;
-}
-
-.partners {
-  margin: 24px auto 0;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 8px 30px rgba(41, 83, 92, 0.1);
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  padding: 16px 22px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #728f96;
-  font-weight: 700;
-  text-align: center;
 }
 
 .contact-layout {

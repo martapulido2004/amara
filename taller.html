@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/taller.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -24,7 +24,102 @@
     </nav>
   </header>
 
-  <main></main>
+  <main class="taller-page">
+    <section class="taller-hero" aria-labelledby="taller-title">
+      <div class="hero-copy">
+        <p class="hero-tag">arte terapia para tu bienestar</p>
+        <h1 id="taller-title">Este es tu taller creativo para sanar, sentir y crear.</h1>
+        <p>
+          Descubre packs de arte terapia, talleres guiados, experiencias inmersivas
+          y merchandising con intención para acompañar tu proceso personal.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+          <a href="#agenda" class="btn btn-light">Próximos talleres</a>
+        </div>
+      </div>
+      <article class="hero-highlight" aria-label="Taller destacado">
+        <img src="img/carruasel/12.jpg" alt="Mujer pintando durante una sesión de arte terapia">
+        <div class="highlight-content">
+          <h2>Taller destacado</h2>
+          <p>Color y calma · Sesión grupal online</p>
+          <span>Inscripciones abiertas</span>
+        </div>
+      </article>
+    </section>
+    <section id="catalogo" class="catalog-grid" aria-labelledby="catalog-title">
+      <header class="section-head">
+        <h2 id="catalog-title">Explora nuestras categorías</h2>
+        <p>Todo lo que necesitas para vivir la arte terapia a tu ritmo.</p>
+      </header>
+
+      <article class="catalog-card pack">
+        <img src="img/carruasel/6.jpg" alt="Materiales de arte sobre una mesa de madera">
+        <div>
+          <h3>Packs de arte terapia</h3>
+          <p>Kits con materiales, guía emocional y ejercicios creativos para casa.</p>
+          <a href="compra.html">Comprar pack</a>
+        </div>
+      </article>
+
+      <article class="catalog-card talleres">
+        <img src="img/carruasel/17.jpg" alt="Grupo participando en una dinámica artística">
+        <div>
+          <h3>Talleres</h3>
+          <p>Sesiones online y presenciales guiadas por facilitadoras de bienestar.</p>
+          <a href="#agenda">Reservar lugar</a>
+        </div>
+      </article>
+
+      <article class="catalog-card experiencias">
+        <img src="img/carruasel/20.jpg" alt="Espacio decorado para una experiencia inmersiva">
+        <div>
+          <h3>Experiencias</h3>
+          <p>Encuentros sensoriales para reconectar contigo y compartir en comunidad.</p>
+          <a href="#experiencias">Quiero saber más</a>
+        </div>
+      </article>
+
+      <article class="catalog-card merch">
+        <img src="img/carruasel/8.jpg" alt="Manos mezclando acuarelas en un cuaderno">
+        <div>
+          <h3>Merchandising</h3>
+          <p>Cuadernos, tote bags y accesorios con frases que inspiran tu proceso.</p>
+          <a href="compra.html">Ver productos</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="agenda" class="workshop-list" aria-labelledby="agenda-title">
+      <header class="section-head">
+        <h2 id="agenda-title">Agenda de talleres</h2>
+        <p>Elige el formato que mejor se adapte a tu energía y tiempo.</p>
+      </header>
+      <div class="workshop-items">
+        <article>
+          <h3>Expresar lo que siento</h3>
+          <p>Martes · 19:00 · Online en vivo</p>
+          <span>Nivel inicial</span>
+        </article>
+        <article>
+          <h3>Ritual creativo de fin de semana</h3>
+          <p>Sábado · 10:00 · Presencial</p>
+          <span>Cupos limitados</span>
+        </article>
+        <article>
+          <h3>Arte terapia para ansiedad</h3>
+          <p>Jueves · 18:30 · Online grupal</p>
+          <span>Incluye guía descargable</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencias" class="cta-band" aria-labelledby="cta-title">
+      <h2 id="cta-title">¿Quieres una experiencia personalizada para tu grupo?</h2>
+      <p>Diseñamos talleres para empresas, comunidades y celebraciones conscientes.</p>
+      <a class="btn btn-primary" href="contacto.html">Solicitar propuesta</a>
+    </section>
+  </main>
 
   <footer>
     <script src="js/script.js"></script>
