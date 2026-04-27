@@ -6,9 +6,10 @@
   <title>Amara | Compra</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/home.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/compra.css">
   <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body>
      <header class="topbar">
@@ -24,8 +25,100 @@
     </nav>
   </header>
     
-  <main>
-    
+  <main class="compra-page">
+    <section class="shipping-banner" aria-label="Promoción de taller">
+      <p><strong>Reserva tu plaza</strong> en talleres creativos y de arte terapia.</p>
+      <a href="taller.html" class="btn-cupon">Ver talleres</a>
+    </section>
+
+    <section class="cart-layout" aria-label="Resumen del carrito">
+      <div class="cart-items">
+        <h1>Tu compra</h1>
+
+        <article class="cart-item">
+          <img src="img/carruasel/9.jpg" alt="Pack de Arte Terapia Lunar">
+          <div class="cart-item__info">
+            <p class="tag">Pack destacado</p>
+            <h2>Pack de Arte Terapia Lunar</h2>
+            <p class="description">Incluye guía de 4 sesiones, láminas y materiales para trabajar emociones.</p>
+            <p class="price">39.90€</p>
+          </div>
+          <button class="remove" type="button" aria-label="Eliminar producto">✕</button>
+          <div class="qty-selector" aria-label="Selector de cantidad">
+            <button type="button" aria-label="Restar unidad">−</button>
+            <span>1</span>
+            <button type="button" aria-label="Sumar unidad">+</button>
+          </div>
+        </article>
+      </div>
+
+      <aside class="checkout-panel">
+        <article class="gift-card">
+          <img src="img/carruasel/14.jpg" alt="Merchandising creativo Amara">
+          <div>
+            <p>Completa tu pedido con merchandising creativo de Amara.</p>
+            <a href="#extras">Ver colección</a>
+          </div>
+        </article>
+
+        <form class="discount-form">
+          <label for="promo">Código de descuento</label>
+          <div>
+            <input id="promo" type="text" placeholder="AMARA10">
+            <button type="submit">Aplicar</button>
+          </div>
+        </form>
+
+        <div class="total-block">
+          <p>Total</p>
+          <strong>39.90€</strong>
+        </div>
+
+        <label class="terms-check" for="terms">
+          <input id="terms" type="checkbox">
+          <span>Acepto los <a href="#">términos y condiciones</a>.</span>
+        </label>
+
+        <button class="btn-pay" type="button">Finalizar compra</button>
+      </aside>
+    </section>
+
+    <section class="extras" id="extras" aria-label="Productos recomendados">
+      <h2>Añade algo más</h2>
+      <div class="extras-grid">
+        <article class="extra-card">
+          <img src="img/carruasel/3.jpg" alt="Taller online de collage emocional">
+          <h3>Taller online de collage emocional</h3>
+          <p class="price">18.00€</p>
+          <p class="muted">Sesión en directo + plantilla descargable.</p>
+          <button type="button">Añadir</button>
+        </article>
+
+        <article class="extra-card">
+          <img src="img/carruasel/5.jpg" alt="Mini pack journaling terapéutico">
+          <h3>Mini pack journaling terapéutico</h3>
+          <p class="price">12.90€</p>
+          <p class="muted">Cuaderno guiado + set de stickers.</p>
+          <button type="button">Añadir</button>
+        </article>
+
+        <article class="extra-card">
+          <img src="img/carruasel/17.jpg" alt="Totebag edición talleres Amara">
+          <h3>Totebag edición talleres Amara</h3>
+          <p class="price">9.50€</p>
+          <p class="muted">Merch oficial en algodón reciclado.</p>
+          <button type="button">Añadir</button>
+        </article>
+
+        <article class="extra-card">
+          <img src="img/carruasel/10.jpg" alt="Kit de acuarela mindfulness">
+          <h3>Kit de acuarela mindfulness</h3>
+          <p class="price">15.00€</p>
+          <p class="muted">Ideal para prácticas de calma y foco creativo.</p>
+          <button type="button">Añadir</button>
+        </article>
+      </div>
+    </section>
   </main>
 
     
