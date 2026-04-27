@@ -74,7 +74,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 250px;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -88,13 +88,13 @@ body {
 .wave-stroke {
   fill: none;
   stroke: var(--amarillo);
-  stroke-width: 58;
+  stroke-width: 50;
   stroke-linecap: round;
 }
 
 .wave-section text {
   fill: #9e57ae;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.4px;
 }

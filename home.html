@@ -43,15 +43,21 @@
    <section class="wave-section" aria-label="Mensaje decorativo">
         <svg viewBox="0 0 1200 240" preserveAspectRatio="none" role="img" aria-hidden="true">
           <defs>
-            <path id="curve" d="M 0 120 C 80 30, 160 30, 240 120 S 400 210, 480 120 S 640 30, 720 120 S 880 210, 960 120 S 1120 30, 1200 120" />
+            <path id="curve" d="M 0 132 C 150 96, 300 96, 450 132 S 750 168, 900 132 S 1050 96, 1200 132" />
           </defs>
-          <path class="wave-stroke" d="M 0 120 C 80 30, 160 30, 240 120 S 400 210, 480 120 S 640 30, 720 120 S 880 210, 960 120 S 1120 30, 1200 120" />
-          <g class="wave-marquee">
+             <path class="wave-stroke" d="M 0 132 C 150 96, 300 96, 450 132 S 750 168, 900 132 S 1050 96, 1200 132" />
+          <g class="wave-marquee is-animated">
             <text>
-              <textPath class="wave-text-primary" href="#curve" startOffset="0%">
-                arte terapia ✶ talleres online individuales ✶ comunidad ✶ recomendaciones ✶ talleres online grupales ✶ kits de arte terapia en casa ✶ convivencias sanadoras✶
+             <textPath class="wave-text-primary" href="#curve" startOffset="0%" textLength="100%" lengthAdjust="spacingAndGlyphs">
+                ✶ arte terapia ✶ talleres individuales ✶ comunidad ✶ recomendaciones ✶ talleres grupales ✶ kits en casa ✶ convivencias sanadoras ✶
               </textPath>
             </text>
+            <text>
+              <textPath class="wave-text-secondary" href="#curve" startOffset="-100%" textLength="100%" lengthAdjust="spacingAndGlyphs">
+                ✶ arte terapia ✶ talleres individuales ✶ comunidad ✶ recomendaciones ✶ talleres grupales ✶ kits en casa ✶ convivencias sanadoras ✶
+              </textPath>
+            </text>
+        
             
           </g>
         </svg>
@@ -141,8 +147,7 @@
         </p>
         <form class="registro-descuento__formulario" action="perfil.html" method="get">
           <input type="hidden" name="view" value="register">
-          <label for="registro-email" class="sr-only">Correo electrónico</label>
-          <input id="registro-email" name="email" type="email" placeholder="Déjanos tu email" required>
+          
           <button type="submit">¡Vamos!</button>
         </form>
       </div>
