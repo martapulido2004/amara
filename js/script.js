@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!waveTexts.length) return;
 
   const speed = 2.2;
+  const textSeparation = 71.5;
   let offset = 0;
   let lastTimestamp = null;
 
@@ -33,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const normalizedOffset = ((offset % 100) + 100) % 100;
 
     waveTexts.forEach((textPath, index) => {
-      const loopOffset = normalizedOffset - (index * 100);
+      const loopOffset = normalizedOffset - (index * textSeparation);
       textPath.setAttribute("startOffset", `${loopOffset}%`);
     });
 
