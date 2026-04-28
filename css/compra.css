@@ -1,5 +1,5 @@
 :root {
-  --amarillo-logo-amara: #ebdc86;
+ --amarillo-logo-amara: #ebdc86;
   --brand-rosa-claro: #ecb5d4;
   --brand-celeste-claro: #acdbe6;
   --brand-amarillo: #f6e81d;
@@ -8,6 +8,7 @@
   --brand-celeste: #6baee0;
   --brand-naranja: #f6a117;
   --brand-verde: #72b62b;
+  --fondo-amarillo: #efe8c0;
 }
 
 * {
@@ -17,7 +18,7 @@
 body {
   margin: 0;
   font-family: "Baloo 2", system-ui, sans-serif;
-  background:  #efe8c0;
+  background:  var(--fondo-amarillo);
   color: var(--brand-fucsia);
 }
 
@@ -28,7 +29,7 @@ body {
 }
 
 .shipping-banner {
-  background: var(--brand-rosa-claro);
+  background: linear-gradient(140deg, #f5dff4, #ecc9e4 65%, #dfb6da);;
   border: 1px solid var(--brand-rosa-claro);
   border-radius: 14px;
   padding: 10px 14px;
@@ -227,7 +228,7 @@ body {
 
 .discount-form button {
   border: 0;
-  background: var(--brand-rosa-claro);
+  background: linear-gradient(140deg, #f5dff4, #ecc9e4 65%, #dfb6da);;
   color: #fff;
   border-radius: 10px;
   padding: 8px 12px;
@@ -268,7 +269,7 @@ body {
 
 .btn-pay {
   border: 0;
-  background: var(--brand-fucsia);
+  background: linear-gradient(140deg, #f5dff4, #ecc9e4 65%, #dfb6da);;
   color: #fff;
   font-size: 17px;
   font-family: inherit;

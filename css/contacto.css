@@ -8,13 +8,14 @@
   --brand-celeste: #6baee0;
   --brand-naranja: #f6a117;
   --brand-verde: #72b62b;
+  --fondo-amarillo: #efe8c0;
 }
 
 body {
   margin: 0;
   font-family: "Baloo 2", system-ui, sans-serif;
-  background: #f8f8f8;
-  color: var(--contact-text);
+  background: var(--fondo-amarillo);
+  color: var(--brand-fucsia);
 }
 
 .contact-page {
@@ -25,7 +26,7 @@ body {
 
 .contact-hero {
   margin-top: 26px;
-  background: linear-gradient(140deg, #dff1f5, #c9e5ec 65%, #b6d9df);
+  background: linear-gradient(140deg, #f5dff4, #ecc9e4 65%, #dfb6da);
   border-radius: 28px;
   padding: 60px 24px;
   text-align: center;
@@ -35,7 +36,7 @@ body {
   margin: 8px 0 14px;
   font-size: clamp(44px, 7vw, 86px);
   line-height: 0.95;
-  color: #0d2428;
+  color: var(--brand-celeste);
 }
 
 .contact-hero__copy {
@@ -108,7 +109,7 @@ button {
   border: none;
   border-radius: 999px;
   padding: 10px 24px;
-  background: linear-gradient(120deg, #5ca5b1, #316d75);
+  background: linear-gradient(120deg, #aeebf4, #70d4e1);
   color: #fff;
   font-weight: 700;
   font-size: 16px;
@@ -116,7 +117,7 @@ button {
 }
 
 .newsletter {
-  background: linear-gradient(160deg, #6aa8b1, #3d6f77);
+  background: linear-gradient(140deg, #f5dff4, #ecc9e4 65%, #dfb6da);;
   color: #fff;
   display: grid;
   align-content: start;
@@ -142,7 +143,7 @@ button {
 .newsletter button {
   width: 100%;
   justify-self: stretch;
-  background: #0e262a;
+  background: linear-gradient(120deg, #f4aed9, #7d1060) ;
 }
 
 .contact-cards {
