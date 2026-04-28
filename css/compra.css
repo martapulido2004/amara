@@ -17,8 +17,8 @@
 body {
   margin: 0;
   font-family: "Baloo 2", system-ui, sans-serif;
-  background: #f7f7f7;
-  color: #232323;
+  background:  #efe8c0;
+  color: var(--brand-fucsia);
 }
 
 .compra-page {
@@ -28,8 +28,8 @@ body {
 }
 
 .shipping-banner {
-  background: #efedf7;
-  border: 1px solid #ded7f0;
+  background: var(--brand-rosa-claro);
+  border: 1px solid var(--brand-rosa-claro);
   border-radius: 14px;
   padding: 10px 14px;
   display: flex;
@@ -46,9 +46,9 @@ body {
 
 .btn-cupon {
   border-radius: 999px;
-  border: 1px solid #3f2a72;
-  background: #fff;
-  color: #3f2a72;
+  border: 1px solid var(--brand-fucsia);
+  background: white;
+  color: var(--brand-fucsia);
   text-decoration: none;
   padding: 6px 14px;
   font-size: 14px;
@@ -69,7 +69,7 @@ body {
   margin: 0 0 12px;
   font-size: 26px;
   line-height: 1;
-  color: #201843;
+  color: var(--brand-fucsia);
 }
 
 .cart-item {
@@ -98,7 +98,7 @@ body {
 
 .tag {
   margin: 0 0 4px;
-  color: #7e6ab3;
+  color: var(--brand-fucsia);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -194,7 +194,7 @@ body {
 }
 
 .gift-card a {
-  color: #3f2a72;
+  color: var(--brand-fucsia);
   font-size: 13px;
   font-weight: 700;
 }
@@ -227,7 +227,7 @@ body {
 
 .discount-form button {
   border: 0;
-  background: #2f2f2f;
+  background: var(--brand-rosa-claro);
   color: #fff;
   border-radius: 10px;
   padding: 8px 12px;
@@ -268,7 +268,7 @@ body {
 
 .btn-pay {
   border: 0;
-  background: linear-gradient(135deg, #8a68d0, #643fb1);
+  background: var(--brand-fucsia);
   color: #fff;
   font-size: 17px;
   font-family: inherit;
