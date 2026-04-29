@@ -61,9 +61,6 @@ body {
 
 .hero-copy p,
 .section-head p,
-.pack-card p,
-.workshop-items p,
-.merch-grid p,
 .coming-soon p {
   margin: 0;
   font-size: clamp(17px, 2vw, 21px);
@@ -104,22 +101,35 @@ body {
   grid-template-rows: 1fr auto;
 }
 
-.hero-highlight img { width: 100%; height: 100%; min-height: 280px; object-fit: cover; }
-.highlight-content { padding: 16px; }
-.highlight-content h2 { margin: 0 0 6px; color: #6a447f; }
-.highlight-content p { margin: 0 0 8px; font-size: 18px; }
-.highlight-content span,
-.workshop-items span {
+.hero-highlight img { 
+  width: 100%; 
+  height: 100%; 
+  min-height: 280px; 
+  object-fit: cover; 
+}
+
+.highlight-content { 
+  padding: 16px;
+}
+
+.highlight-content h2 {
+  margin: 0 0 6px; 
+  color: #6a447f; 
+}
+
+.highlight-content p { 
+  margin: 0 0 8px; 
+  font-size: 18px; 
+}
+
+.highlight-content span {
   display: inline-block;
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
-}
-
-.highlight-content span { 
-  background: #e9def8; 
-  color: #5a3375; 
+  background: #e9def8;
+  color: #5a3375;
 }
 
 .section-shell { 
@@ -137,108 +147,97 @@ body {
   margin-top: 4px; 
   }
 
-.packs-grid {
+.product-carousel {
   margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
+  .product-carousel.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
-.pack-card {
+.product-carousel.three-col {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.product-card {
+  position: relative;
   margin: 0;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 22px rgba(53, 47, 58, 0.1);
   background: #fff;
+  box-shadow: 0 8px 22px rgba(53, 47, 58, 0.12);
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.pack-card img { 
-  width: 100%; 
-  height: 200px; 
-  object-fit: cover; 
-  display: block; 
+.product-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
 }
 
-.pack-card > div { 
-  padding: 14px; 
+.product-main {
+  padding: 12px 14px 16px;
 }
 
-.pack-card h3 { 
-  margin: 4px 0 8px; 
-  font-size: 40px; 
-  line-height: 0.85; 
-  color: #47245e; 
+.product-main h3 {
+  margin: 0;
+  color: #5f3679;
+  font-size: 30px;
+  line-height: .95;
 }
 
-.pack-card a { 
-  display: inline-block; 
-  margin-top: 10px; 
-  color: #131313; 
-  font-weight: 700; 
+.product-price {
+  margin-top: 8px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  color: #2b2035;
 }
 
-.pack-card.calma { 
-  background: linear-gradient(150deg, #f4f0ff, #f2faf9); 
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  color: #fff;
+  background: linear-gradient(180deg, rgba(47, 25, 61, 0.15) 0%, rgba(47, 25, 61, 0.93) 70%);
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .25s ease, transform .25s ease;
 }
 
-.pack-card.suelta { 
-  background: linear-gradient(150deg, #fff3f5, #fff8ef); 
+.product-overlay p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.2;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.pack-card.fluye { 
-  background: linear-gradient(150deg, #edf6ff, #f6f0ff); 
+.product-overlay a {
+  color: #fff3b0;
+  font-weight: 700;
 }
 
-.workshop-items { 
-  margin-top: 16px; 
-  display: grid; 
-  gap: 12px; 
+.product-card:hover,
+.product-card:focus-within {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(53, 47, 58, 0.22);
 }
 
-.workshop-items.two-col { 
-  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+.product-card:hover .product-overlay,
+.product-card:focus-within .product-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.workshop-items.three-col { 
-  grid-template-columns: repeat(3, minmax(0, 1fr)); 
-}
-
-.workshop-items article,
-.merch-grid article {
-  background: #fff;
-  border-radius: 16px;
-  padding: 14px;
-}
-
-.workshop-items h3,
-.merch-grid h3 { 
-  margin: 0; 
-  color: #5f3679; 
-  font-size: 30px; 
-  line-height: 0.95; 
-}
-
-.workshop-items p,
-.merch-grid p { 
-  margin-top: 8px; 
-  font-size: 18px; 
-}
-
-.workshop-items span { 
-  margin-top: 10px; 
-  background: #f1e7fc; 
-  color: #5c2d78; 
-}
-
-.merch-shell { 
-  background: linear-gradient(120deg, rgba(243, 231, 238, 0.9), rgba(233, 247, 249, 0.9)); 
-}
-
-.merch-grid { 
-  margin-top: 16px; 
-  display: grid; 
-  grid-template-columns: repeat(3, minmax(0, 1fr)); 
-  gap: 12px; 
+.merch-shell {
+  background: linear-gradient(120deg, rgba(243, 231, 238, 0.9), rgba(233, 247, 249, 0.9));
 }
 
 .coming-soon {
@@ -269,8 +268,7 @@ body {
 
 @media (max-width: 1024px) {
   .taller-hero,
-  .packs-grid,
-  .workshop-items.two-col,
-  .workshop-items.three-col,
-  .merch-grid { grid-template-columns: 1fr; }
+  .product-carousel,
+  .product-carousel.two-col,
+  .product-carousel.three-col { grid-template-columns: 1fr; }
 }
