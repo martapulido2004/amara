@@ -184,20 +184,6 @@ button {
   font-size: 26px;
 }
 
-.map-wrapper {
-  margin-top: 22px;
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 8px 22px rgba(62, 86, 91, 0.14);
-}
-
-.map-wrapper iframe {
-  width: 100%;
-  height: 320px;
-  border: 0;
-  display: block;
-}
 
 @media (max-width: 980px) {
   .contact-layout,
