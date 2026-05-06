@@ -474,3 +474,120 @@ body {
     height: 300px;
   }
 }
+.emotion-circle {
+  padding: 88px 90px 92px;
+  background: linear-gradient(160deg, #f9f2ea 0%, #f4e7ef 45%, #efe9df 100%);
+}
+
+.emotion-circle__heading {
+  max-width: 780px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.emotion-circle__heading h2 {
+  margin: 0 0 14px;
+  color: #6f4a68;
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.05;
+}
+
+.emotion-circle__heading p {
+  margin: 0;
+  color: #514947;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.emotion-wheel {
+  position: relative;
+  max-width: 900px;
+  min-height: 680px;
+  margin: 0 auto;
+}
+
+.emotion-wheel__center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 270px;
+  height: 270px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f7ece7 75%);
+  border: 2px solid rgba(177, 140, 132, 0.35);
+  box-shadow: 0 16px 35px rgba(111, 74, 104, 0.13);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.emotion-wheel__center p {
+  margin: 0;
+  color: #6c4e60;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 2.4vw, 36px);
+  line-height: 1.2;
+}
+
+.emotion-item {
+  position: absolute;
+  width: min(240px, 28vw);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(164, 137, 131, 0.25);
+  border-radius: 16px;
+  padding: 14px 14px 13px;
+  box-shadow: 0 8px 22px rgba(109, 77, 87, 0.12);
+}
+
+.emotion-item h3 {
+  margin: 0 0 4px;
+  color: #7f4f68;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.emotion-item p {
+  margin: 0;
+  font-family: "Inter", Arial, sans-serif;
+  color: #3f3a38;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+.emotion-item--1 { left: 8%; top: 6%; }
+.emotion-item--2 { left: 0; top: 36%; }
+.emotion-item--3 { left: 10%; bottom: 8%; }
+.emotion-item--4 { left: 50%; bottom: 0; transform: translateX(-50%); }
+.emotion-item--5 { right: 10%; bottom: 8%; }
+.emotion-item--6 { right: 0; top: 36%; }
+.emotion-item--7 { right: 8%; top: 6%; }
+
+@media (max-width: 900px) {
+  .emotion-circle {
+    padding: 64px 28px 70px;
+  }
+
+  .emotion-wheel {
+    min-height: auto;
+    display: grid;
+    gap: 14px;
+  }
+
+  .emotion-wheel__center,
+  .emotion-item {
+    position: static;
+    width: 100%;
+    transform: none;
+  }
+
+  .emotion-wheel__center {
+    order: -1;
+    height: auto;
+    min-height: 180px;
+    border-radius: 24px;
+  }
+}
