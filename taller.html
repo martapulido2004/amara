@@ -6,13 +6,13 @@
   <title>Amara | Taller</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/taller.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <header class="topbar">
-     <div class="brand">
+  <header class="topbar">
+    <div class="brand">
       <img src="img/logotipoblanco.png" alt="Amara">
     </div>
     <nav>
@@ -24,132 +24,90 @@
     </nav>
   </header>
 
-  <main class="taller-page">
-    <section class="taller-hero" aria-labelledby="taller-title">
+  <main class="shop-page">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="hero-tag">rituales creativos de bienestar</p>
-        <h1 id="taller-title">Taller Amara: un espacio para volver a ti creando.</h1>
-        <p>
-        Aquí no solo compras, aquí eliges cómo acompañarte. Cada propuesta de Taller
-        está pensada como una experiencia íntima de pausa, autocuidado y conexión emocional.
-        </p>
-        <div class="hero-actions">
-          <a href="#packs" class="btn btn-primary">Explorar packs</a>
-          <a href="#presenciales" class="btn btn-light">Ver agenda presencial</a>
-        </div>
+         <p class="eyebrow">Tienda Amara</p>
+        <h1 id="hero-title">Experiencias para volver a ti</h1>
+        <p class="lead">Kits creativos, talleres, convivencias y objetos de autocuidado emocional para acompañar tu bienestar con belleza, pausa y presencia.</p>
+        <a class="btn btn-primary" href="#destacados">Explorar productos</a>
       </div>
-      <article class="hero-highlight" aria-label="Experiencia destacada">
-        <img src="img/carruasel/12.jpg" alt="Mujer pintando durante una sesión de arte terapia">
-        <div class="highlight-content">
-           <h2>Experiencia destacada</h2>
-          <p>Círculo online: Crear para habitar la calma</p>
-          <span>Reserva abierta</span>
-        </div>
-      </article>
-    </section>
-    <section id="packs" class="section-shell" aria-labelledby="packs-title">
+      <figure class="hero-media">
+        <img src="img/carruasel/20.jpg" alt="Selección editorial de productos y objetos de autocuidado Amara">
+      </figure>
+    <section id="destacados" class="section" aria-labelledby="destacados-title">
       <header class="section-head">
-        <h2 id="packs-title">Packs creativos</h2>
-        <p>Tres rituales para sentir, soltar y reconectar contigo a través del arte.</p>
+        <p class="eyebrow">Selección curada</p>
+        <h2 id="destacados-title">Productos destacados</h2>
       </header>
-
-      <div class="product-carousel">
-        <article class="product-card packs-card">
-          <img src="img/carruasel/6.jpg" alt="Piezas de cerámica y arcilla sobre una mesa">
-          <div class="product-main"><h3>Pack Calma</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p class="pack-label">Pack de cerámica</p><p>Texturas, respiración y presencia. Un ritual para bajar el ritmo y sostenerte con las manos.</p><a href="compra.html">Quiero este ritual</a></div>
-        </article>
-
-       <article class="product-card packs-card">
-          <img src="img/carruasel/11.jpg" alt="Cuaderno abierto con escritura terapéutica">
-          <div class="product-main"><h3>Pack Suelta</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p class="pack-label">Pack de escritura</p><p>Palabras para ordenar el corazón. Una práctica guiada para liberar emoción y escucharte.</p><a href="compra.html">Empezar a escribir</a></div>
-        </article>
-
-       <article class="product-card packs-card">
-          <img src="img/carruasel/4.jpg" alt="Pinceles y acuarelas en una sesión creativa">
-          <div class="product-main"><h3>Pack Fluye</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p class="pack-label">Pack de pintura</p><p>Color, intuición y movimiento emocional. Un espacio para expresarte sin juicio.</p><a href="compra.html">Quiero fluir</a></div>
-        </article>
-      </div>
-    </section>
-
-    <section id="online" class="section-shell" aria-labelledby="online-title">
-      <header class="section-head">
-        <h2 id="online-title">Talleres online</h2>
-        <p>Encuentros guiados para bienestar femenino, gestión emocional y conexión personal.</p>
-      </header>
-       <div class="product-carousel two-col">
+       <div class="product-grid">
         <article class="product-card">
-          <img src="img/carruasel/8.jpg" alt="Mujer escribiendo en un taller online">
-          <div class="product-main"><h3>Escritura para sostenerte</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p>Miércoles · 19:00 · Online en vivo.</p><p>Incluye cuaderno digital y guía descargable.</p></div>
+          <img src="img/carruasel/6.jpg" alt="Kit creativo de cerámica Amara">
+          <div class="product-info">
+            <h3>Kit Calma · Cerámica</h3>
+            <p>Arcilla, guía sensorial y playlist de respiración para habitarte con calma.</p>
+            <div class="product-meta"><span>48 €</span><a href="compra.html">Comprar</a></div>
+          </div>
+        </article>
+        <article class="product-card">
+           <img src="img/carruasel/11.jpg" alt="Kit de escritura emocional Amara">
+          <div class="product-info">
+            <h3>Kit Suelta · Escritura</h3>
+            <p>Ritual íntimo para nombrar lo que sientes y ordenar tu mundo interior.</p>
+            <div class="product-meta"><span>42 €</span><a href="compra.html">Comprar</a></div>
+          </div>
         </article>
     
         <article class="product-card">
-          <img src="img/carruasel/10.jpg" alt="Sesión virtual de pintura emocional">
-          <div class="product-main"><h3>Pintar lo que no puedo decir</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p>Jueves · 18:30 · Online grupal.</p><p>Práctica emocional guiada con materiales en casa.</p></div>
+          <img src="img/carruasel/4.jpg" alt="Kit de pintura emocional Amara">
+          <div class="product-info">
+            <h3>Kit Fluye · Pintura</h3>
+            <p>Color y práctica expresiva para liberar tensión y reconectar con tu intuición.</p>
+            <div class="product-meta"><span>46 €</span><a href="compra.html">Comprar</a></div>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="presenciales" class="section-shell" aria-labelledby="presenciales-title">
+     <section class="section" aria-labelledby="categorias-title">
       <header class="section-head">
-        <h2 id="presenciales-title">Próximos talleres y convivencias presenciales</h2>
-        <p>Retiros, encuentros grupales y experiencias en comunidad para crear y compartir.</p>
+        <p class="eyebrow">Explora por tipo de experiencia</p>
+        <h2 id="categorias-title">Categorías Amara</h2>
       </header>
-      <div class="product-carousel three-col">
-        <article class="product-card">
-          <img src="img/carruasel/15.jpg" alt="Grupo creando en convivencia presencial">
-          <div class="product-main"><h3>Convivencia creativa Amara</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p>Sábado · 10:00 · Ciudad de México.</p><p>Cupos limitados para una experiencia íntima.</p></div>
+      <div class="category-grid">
+        <article class="category-card">
+          <img src="img/carruasel/13.jpg" alt="Materiales de arte para kits creativos">
+          <div><h3>Kits creativos</h3><p>Rituales en casa para cuando necesitas volver a ti.</p></div>
         </article>
-        <article class="product-card">
-          <img src="img/carruasel/18.jpg" alt="Retiro de arte en espacio natural">
-          <div class="product-main"><h3>Retiro de arte y autocuidado</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p>Fin de semana · Valle de Bravo.</p><p>Experiencia inmersiva con acompañamiento.</p></div>
+        <article class="category-card">
+          <img src="img/carruasel/8.jpg" alt="Mujer en taller online escribiendo">
+          <div><h3>Talleres online</h3><p>Sesiones en vivo para sostenerte en comunidad, estés donde estés.</p></div>
         </article>
-        <article>
-          <h3>Cerámica para volver al cuerpo</h3>
-          <p>Domingo · 11:00 · Taller presencial</p>
-          <span>Material incluido</span>
+         <article class="category-card">
+          <img src="img/carruasel/15.jpg" alt="Convivencia presencial en círculo de mujeres">
+          <div><h3>Convivencias presenciales</h3><p>Encuentros inmersivos para crear, compartir y descansar juntas.</p></div>
+        </article>
+        <article class="category-card">
+          <img src="img/carruasel/9.jpg" alt="Merch de Amara para journaling">
+          <div><h3>Merch de Amara</h3><p>Objetos bellos para extender tus rituales cotidianos.</p></div>
         </article>
       </div>
     </section>
 
-    <section id="merch" class="section-shell merch-shell" aria-labelledby="merch-title">
-      <header class="section-head">
-        <h2 id="merch-title">Merch de la marca</h2>
-        <p>Piezas aspiracionales y cuidadas para llevar el universo Amara en tu día a día.</p>
-      </header>
-      <div class="product-carousel three-col">
-        <article class="product-card">
-          <img src="img/carruasel/20.jpg" alt="Bolsa tote bag de la marca Amara">
-          <div class="product-main"><h3>Tote bag ritual</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p>Para tus cuadernos, colores y momentos contigo.</p><p>Canvas premium con impresión Amara.</p></div>
-        </article>
-       <article class="product-card">
-          <img src="img/carruasel/21.jpg" alt="Vela aromática en mesa de autocuidado">
-          <div class="product-main"><h3>Vela "Vuelve a ti"</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p>Aroma suave para acompañar tus pausas creativas.</p><p>Duración aproximada de 40 horas.</p></div>
-        </article>
-        <article class="product-card">
-          <img src="img/carruasel/9.jpg" alt="Libreta Amara para journaling">
-          <div class="product-main"><h3>Libreta Amara</h3><p class="product-price">28 €</p></div>
-          <div class="product-overlay"><p>Diseñada para journaling emocional y escritura libre.</p><p>120 páginas en papel ahuesado.</p></div>
-        </article>
+     <section class="section experience" aria-labelledby="experiencias-title">
+      <div>
+        <p class="eyebrow">Más que una compra</p>
+        <h2 id="experiencias-title">Experiencias que acompañan tus ciclos</h2>
+        <p>Cada taller y convivencia está diseñado como una experiencia de marca: delicada, contenedora y emocionalmente segura. No vendemos solo productos; diseñamos momentos para sentirte acompañada con estética, cuidado y profundidad.</p>
       </div>
+       <img src="img/carruasel/18.jpg" alt="Mujer en experiencia inmersiva de autocuidado creativo">
     </section>
 
-    <section class="coming-soon" aria-labelledby="coming-title">
-      <p class="coming-tag">próximo lanzamiento</p>
-      <h2 id="coming-title">Un nuevo ritual está por llegar...</h2>
-      <p>
-        Estamos preparando una experiencia sensorial inédita. Aún no podemos mostrarla completa,
-        pero será una edición especial para quienes desean llevar su práctica creativa un paso más allá.
-      </p>
-      <a class="btn btn-primary" href="contacto.html">Quiero enterarme primero</a>
+     <section class="section launch" aria-labelledby="launch-title">
+      <p class="eyebrow">Próximo lanzamiento</p>
+      <h2 id="launch-title">Algo nuevo está floreciendo</h2>
+      <p>Una edición limitada está en camino: íntima, sensorial y creada para quienes quieren vivir su autocuidado como un ritual de autor.</p>
+      <a class="btn btn-secondary" href="contacto.html">Quiero enterarme</a>
     </section>
   </main> 
 
