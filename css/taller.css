@@ -151,6 +151,33 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
   padding: clamp(1.3rem, 3vw, 2.4rem); 
 }
 
+.categorias-full {
+  min-height: 100vh;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: clamp(1rem, 2vw, 2rem);
+  border-radius: 0;
+  display: grid;
+  align-content: start;
+  background: var(--surface);
+  border: none;
+}
+
+.categorias-full .section-head,
+.categorias-full .category-grid {
+  width: min(1260px, 100%);
+  margin-inline: auto;
+}
+
+.categorias-full .category-card {
+  grid-template-rows: 170px auto;
+}
+
+.categorias-full .category-card h3 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
