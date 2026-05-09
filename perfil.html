@@ -29,7 +29,7 @@
     <section class="perfil-auth" aria-label="Acceso y registro">
       <article class="auth-card auth-card--switcher" data-auth-switcher>
         <header class="auth-switcher-header">
-           <p class="auth-eyebrow">Amara</p>
+           
           <h1>¡Qué bueno verte!</h1>
           <p>Inicia sesión o regístrate para guardar tus casas favoritas y avanzar en tu compra.</p>
         </header>
@@ -68,11 +68,20 @@
            <h2>Regístrate</h2>
             <p>Crea una cuenta y elige el plan que mejor se adapte a ti.</p>
             <form class="auth-form" action="#" method="post">
-              <label for="register-name">Nombre completo</label>
-              <input id="register-name" name="name" type="text" placeholder="Tu nombre" required>
+              <div class="auth-two-cols">
+                <div class="auth-field">
+                  <label for="register-name">Nombre completo</label>
+                  <input id="register-name" name="name" type="text" placeholder="Tu nombre" required>
+                </div>
 
-          <label for="register-email">Email</label>
-              <input id="register-email" name="email" type="email" placeholder="Ingresa tu email" required>
+          <div class="auth-field">
+                  <label for="register-email">Email</label>
+                  <input id="register-email" name="email" type="email" placeholder="Ingresa tu email" required>
+                </div>
+              </div>
+
+            <label for="register-password">Contraseña</label>
+              <input id="register-password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
 
                <fieldset class="subscription-options">
                 <legend>Elige tu suscripción antes de registrarte</legend>
@@ -90,8 +99,7 @@
                 </label>
               </fieldset>
 
-           <label for="register-password">Contraseña</label>
-              <input id="register-password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
+  
           
               <button type="submit">Crear cuenta</button>
             </form>

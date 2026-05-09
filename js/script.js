@@ -56,8 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const tabs = Array.from(switcher.querySelectorAll("[data-auth-target]"));
   const panels = Array.from(switcher.querySelectorAll("[data-auth-panel]"));
+  const authContainer = document.querySelector(".perfil-auth");
 
   const activate = (target) => {
+    const isRegister = target === "register";
+    switcher.classList.toggle("is-register-mode", isRegister);
+    if (authContainer) {
+      authContainer.classList.toggle("is-register", isRegister);
+    }
     tabs.forEach((tab) => {
       const isActive = tab.dataset.authTarget === target;
       tab.classList.toggle("is-active", isActive);
@@ -75,6 +81,11 @@ document.addEventListener("DOMContentLoaded", () => {
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => activate(tab.dataset.authTarget));
   });
+
+  const initialTab = tabs.find((tab) => tab.classList.contains("is-active"));
+  if (initialTab) {
+    activate(initialTab.dataset.authTarget);
+  }
 
   switcher.addEventListener("keydown", (event) => {
     if (event.key !== "ArrowRight" && event.key !== "ArrowLeft") return;
