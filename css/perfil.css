@@ -38,7 +38,10 @@ body {
 
 .perfil-auth {
   --perfil-bg-login: url('../img/carruasel/9.jpg');
-  --perfil-bg-register: url('../img/carruasel/9.jpg');
+  --perfil-bg-register: url('../img/carruasel/14.jpg');
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,15 +53,37 @@ body {
   margin-right: calc(50% - 50vw);
   padding: 32px 20px;
   border-radius: 0;
-  background-image: linear-gradient(135deg, rgba(177, 216, 234, 0.65), rgba(245, 134, 212, 0.45)), var(--perfil-bg-login);
-  background-size: cover;
-  background-position: center;
   box-shadow: none;
-  transition: background-image 0.35s ease-in-out;
 }
 
-.perfil-auth.is-register {
+.perfil-auth::before,
+.perfil-auth::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  will-change: opacity;
+  transition: opacity 0.85s ease;
+}
+
+.perfil-auth::before {
+  opacity: 1;
+  background-image: linear-gradient(135deg, rgba(177, 216, 234, 0.65), rgba(245, 134, 212, 0.45)), var(--perfil-bg-login);
+}
+
+.perfil-auth::after {
+  opacity: 0;
   background-image: linear-gradient(135deg, rgba(238, 143, 216, 0.65), rgba(109, 245, 127, 0.45)), var(--perfil-bg-register);
+}
+
+.perfil-auth.is-register::before {
+  opacity: 0;
+}
+
+.perfil-auth.is-register::after {
+  opacity: 1;
 }
 
 .auth-card {
@@ -210,8 +235,8 @@ body {
   gap: 8px;
 }
 
-.subscription-title {
-  margin: 10px 0 6px;
+.auth-card .subscription-title {
+  margin: 8px 0 2px;
   font-weight: 700;
   color: #fff;
 }
