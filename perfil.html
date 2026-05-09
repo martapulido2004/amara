@@ -83,8 +83,10 @@
             <label for="register-password">Contraseña</label>
               <input id="register-password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
 
-               <fieldset class="subscription-options">
-                <legend>Elige tu suscripción antes de registrarte</legend>
+              
+                <p class="subscription-title">Elige tu suscripción antes de registrarte</p>
+               <fieldset class="subscription-options" aria-labelledby="subscription-title">
+              
                 <label class="subscription-option" for="plan-free">
                   <input id="plan-free" type="radio" name="subscription" value="free" required>
                   <span><strong>Gratis</strong> · $0/mes · Acceso básico</span>
