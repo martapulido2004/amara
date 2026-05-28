@@ -59,7 +59,7 @@ body {
 .perfil-auth.is-register {
   align-items: flex-start;
   padding-top: 48px;
-  padding-bottom: 72px;
+  padding-bottom: 40px;
 }
 
 .perfil-auth::before,
@@ -106,7 +106,7 @@ body {
 
 .auth-card.is-register-mode {
   width: min(1180px, 100%);
-  padding: 34px 34px 40px;
+  padding: 34px 34px 18px;
   background: linear-gradient(150deg, rgba(245, 228, 109, 0.82), rgba(219, 188, 74, 0.8));
   box-shadow: 0 18px 48px rgba(85, 64, 8, 0.28);
 }
@@ -146,6 +146,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.auth-panel[data-auth-panel="register"] .auth-form {
+  gap: 6px;
+}
+
+.auth-panel[data-auth-panel="register"] .auth-form > button[type="submit"] {
+  margin-top: 2px;
 }
 
 .auth-switcher-header p {
@@ -188,7 +196,7 @@ body {
 .auth-panels {
   position: relative;
   min-height: 330px;
-  transition: height 0.35s ease;
+  transition: height 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .auth-panel {
@@ -197,14 +205,23 @@ body {
   width: 100%;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(22px) scale(0.98);
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  visibility: hidden;
+  transform: translateX(24px) scale(0.985);
+  transition:
+    opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0.42s;
 }
 
 .auth-panel.is-active {
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
   transform: translateX(0) scale(1);
+  transition:
+    opacity 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0s;
 }
 
 .auth-panel[aria-hidden="true"] {
@@ -396,7 +413,7 @@ body {
   }
 
   .auth-card.is-register-mode {
-    padding: 26px 22px 30px;
+    padding: 26px 22px 16px;
   }
 
   .auth-switcher-tabs {
@@ -560,7 +577,7 @@ body {
 @media (max-width: 680px) {
   .perfil-auth.is-register {
     padding-top: 24px;
-    padding-bottom: 42px;
+    padding-bottom: 24px;
   }
 
   .planes-grid {
