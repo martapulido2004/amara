@@ -36,6 +36,10 @@ body {
   padding: 0 20px;
 }
 
+.perfil-main--flush-footer {
+  margin-bottom: 0;
+}
+
 .perfil-auth {
   --perfil-bg-login: url('../img/carruasel/9.jpg');
   --perfil-bg-register: url('../img/carruasel/14.jpg');

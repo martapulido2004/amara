@@ -25,7 +25,7 @@
   </header>
 
  
-    <main class="perfil-main">
+    <main class="perfil-main perfil-main--flush-footer">
     <section class="perfil-auth" aria-label="Acceso y registro">
       <article class="auth-card auth-card--switcher" data-auth-switcher>
         <header class="auth-switcher-header">
@@ -146,13 +146,68 @@
         </div>
       </article>
     </section>
-
-    
   </main>
   
 
-  <footer>
-    <script src="js/script.js"></script>
+  <footer class="site-footer site-footer--flush">
+    <div class="site-footer__inner">
+      <div class="site-footer__brand">
+        <img class="site-footer__logo" src="img/logotipoblanco.png" alt="Amara">
+        <p class="site-footer__tagline">Arte terapia, bienestar creativo y experiencias para reconectar contigo desde un lugar amable, sensible y bonito.</p>
+        <a class="site-footer__cta" href="perfil.html?view=register">Únete a Amara</a>
+      </div>
+
+      <div class="site-footer__group">
+        <p class="site-footer__title">Explorar</p>
+        <nav class="site-footer__links" aria-label="Enlaces del sitio">
+          <a href="home.html">Home</a>
+          <a href="taller.html">Taller</a>
+          <a href="contacto.html">Contáctanos</a>
+          <a href="perfil.html">Perfil</a>
+          <a href="compra.html">Compra</a>
+        </nav>
+      </div>
+
+      <div class="site-footer__group">
+        <p class="site-footer__title">Experiencias</p>
+        <div class="site-footer__links">
+          <a href="taller.html">Kits creativos</a>
+          <a href="taller.html">Talleres online</a>
+          <a href="taller.html">Convivencias</a>
+          <a href="compra.html">Colección Amara</a>
+        </div>
+      </div>
+
+      <div class="site-footer__group">
+        <p class="site-footer__title">Contacto</p>
+        <div class="site-footer__contact">
+          <a href="mailto:hola@amara.es">hola@amara.es</a>
+          <a href="tel:+34917656650">(+34) 91 765 66 50</a>
+          <p>Lun a vie · 9:00 a 18:00 h</p>
+          <p>Servicio online en toda España</p>
+        </div>
+        <div class="site-footer__social" aria-label="Redes sociales">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5"></rect>
+              <circle cx="12" cy="12" r="4.25"></circle>
+              <circle cx="17.2" cy="6.8" r="1.1" class="site-footer__icon-fill"></circle>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 4v9.35a3.85 3.85 0 1 1-3.1-3.78"></path>
+              <path d="M14 4c1.05 1.92 2.52 3.09 4.75 3.35"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>Amara · Creatividad, calma y comunidad.</p>
+    </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
 </html>
