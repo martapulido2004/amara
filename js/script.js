@@ -57,6 +57,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const tabs = Array.from(switcher.querySelectorAll("[data-auth-target]"));
   const panels = Array.from(switcher.querySelectorAll("[data-auth-panel]"));
   const authContainer = document.querySelector(".perfil-auth");
+  const authPanels = switcher.querySelector(".auth-panels");
+
+  const syncPanelHeight = () => {
+    if (!authPanels) return;
+
+    const activePanel = panels.find((panel) => panel.classList.contains("is-active"));
+    if (!activePanel) return;
+
+    authPanels.style.height = `${activePanel.scrollHeight}px`;
+  };
 
   const activate = (target) => {
     const isRegister = target === "register";
@@ -76,15 +86,23 @@ document.addEventListener("DOMContentLoaded", () => {
       panel.classList.toggle("is-active", isActive);
       panel.setAttribute("aria-hidden", String(!isActive));
     });
+
+    requestAnimationFrame(syncPanelHeight);
   };
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", () => activate(tab.dataset.authTarget));
   });
 
-  const initialTab = tabs.find((tab) => tab.classList.contains("is-active"));
+  const requestedView = new URLSearchParams(window.location.search).get("view");
+  const initialTab =
+    tabs.find((tab) => tab.dataset.authTarget === requestedView) ||
+    tabs.find((tab) => tab.classList.contains("is-active"));
+
   if (initialTab) {
     activate(initialTab.dataset.authTarget);
+  } else {
+    syncPanelHeight();
   }
 
   switcher.addEventListener("keydown", (event) => {
@@ -99,4 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     nextTab.focus();
     event.preventDefault();
   });
+
+  window.addEventListener("resize", syncPanelHeight);
 });

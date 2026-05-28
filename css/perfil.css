@@ -56,6 +56,12 @@ body {
   box-shadow: none;
 }
 
+.perfil-auth.is-register {
+  align-items: flex-start;
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+
 .perfil-auth::before,
 .perfil-auth::after {
   content: '';
@@ -87,7 +93,7 @@ body {
 }
 
 .auth-card {
-  width: min(560px, 100%);
+  width: min(580px, 100%);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 26px;
   padding: 28px;
@@ -95,11 +101,14 @@ body {
   background: linear-gradient(150deg, rgba(245, 233, 7, 0.45), rgba(242, 196, 14, 0.68));
   backdrop-filter: blur(8px);
   box-shadow: 0 14px 40px rgba(10, 8, 28, 0.32);
-  transition: width 0.3s ease, max-width 0.3s ease;
+  transition: width 0.3s ease, max-width 0.3s ease, padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .auth-card.is-register-mode {
- width: min(900px, 100%);
+  width: min(1180px, 100%);
+  padding: 34px 34px 40px;
+  background: linear-gradient(150deg, rgba(245, 228, 109, 0.82), rgba(219, 188, 74, 0.8));
+  box-shadow: 0 18px 48px rgba(85, 64, 8, 0.28);
 }
 
 .auth-eyebrow {
@@ -178,16 +187,14 @@ body {
 
 .auth-panels {
   position: relative;
- min-height: 330px;
-}
-
-.auth-card.is-register-mode .auth-panels {
-  min-height: 550px;
+  min-height: 330px;
+  transition: height 0.35s ease;
 }
 
 .auth-panel {
   position: absolute;
   inset: 0;
+  width: 100%;
   opacity: 0;
   pointer-events: none;
   transform: translateX(22px) scale(0.98);
@@ -236,9 +243,10 @@ body {
 }
 
 .auth-card .subscription-title {
-  margin: 8px 0 2px;
+  margin: 0 0 4px;
   font-weight: 700;
   color: #fff;
+  font-size: 1.08rem;
 }
 
 .sr-only {
@@ -253,28 +261,76 @@ body {
   border: 0;
 }
 
-.subscription-options {
-  margin: 0 0 4px;
-  padding: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.38);
-  border-radius: 14px;
-  display: grid;
-  gap: 8px;
-  background: rgba(31, 20, 56, 0.3);
+.subscription-picker {
+  margin: 12px 0 0;
+  padding: 0;
+  border: 0;
+  min-inline-size: 0;
 }
 
-.subscription-option {
+.planes-grid--register {
+  margin-top: 14px;
+  gap: 18px;
+}
+
+.plan-choice {
+  display: block;
+  min-width: 0;
+}
+
+.plan-choice__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.plan-choice__surface {
+  position: relative;
   display: flex;
-  gap: 10px;
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 10px;
-  padding: 9px 10px;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-.subscription-option input {
-  margin: 0;
-  accent-color: #f6d5ff;
+.plan-choice__copy {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.plan-choice__title {
+  margin: 0 0 4px;
+  color: #7f3b98;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.plan-choice:hover .plan-choice__surface {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px rgba(91, 54, 130, 0.2);
+}
+
+.plan-choice__input:focus-visible + .plan-choice__surface {
+  outline: 3px solid rgba(255, 255, 255, 0.9);
+  outline-offset: 4px;
+}
+
+.plan-choice__input:checked + .plan-choice__surface {
+  transform: translateY(-6px);
+  border-color: rgba(111, 54, 153, 0.68);
+  box-shadow: 0 22px 38px rgba(88, 51, 120, 0.28);
+}
+
+.plan-button--choice {
+  display: block;
+  width: 100%;
+  pointer-events: none;
+}
+
+.plan-choice__input:checked + .plan-choice__surface .plan-button--choice {
+  box-shadow: 0 14px 24px rgba(46, 33, 88, 0.32);
 }
 
 .auth-row {
@@ -339,6 +395,10 @@ body {
     padding: 22px;
   }
 
+  .auth-card.is-register-mode {
+    padding: 26px 22px 30px;
+  }
+
   .auth-switcher-tabs {
     width: 100%;
   }
@@ -349,10 +409,6 @@ body {
 
   .auth-panels {
     min-height: 400px;
-  }
-
-.auth-card.is-register-mode .auth-panels {
-    min-height: 560px;
   }
 
   .auth-two-cols {
@@ -502,6 +558,11 @@ body {
 }
 
 @media (max-width: 680px) {
+  .perfil-auth.is-register {
+    padding-top: 24px;
+    padding-bottom: 42px;
+  }
+
   .planes-grid {
     grid-template-columns: 1fr;
     gap: 18px;

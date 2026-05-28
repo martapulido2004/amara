@@ -84,21 +84,58 @@
               <input id="register-password" name="password" type="password" placeholder="Mínimo 8 caracteres" minlength="8" required>
 
               
-                <p class="subscription-title">Elige tu suscripción antes de registrarte</p>
-               <fieldset class="subscription-options" aria-labelledby="subscription-title">
-              
-                <label class="subscription-option" for="plan-free">
-                  <input id="plan-free" type="radio" name="subscription" value="free" required>
-                  <span><strong>RAÍZ</strong> · 0€/mes · Para empezar a conectar contigo.</span>
-                </label>
-                <label class="subscription-option" for="plan-plus">
-                  <input id="plan-plus" type="radio" name="subscription" value="plus">
-                  <span><strong>BROTE</strong> · 12€/mes · Para profundizar en tu bienestar creativo.</span>
-                </label>
-                <label class="subscription-option" for="plan-premium">
-                  <input id="plan-premium" type="radio" name="subscription" value="premium">
-                  <span><strong>FLOR</strong> · 25€/mes · Para vivir la experiencia Amara completa.</span>
-                </label>
+                <fieldset class="subscription-picker">
+                <legend class="subscription-title">Elige tu suscripción antes de registrarte</legend>
+                <div class="planes-grid planes-grid--register">
+                  <label class="plan-choice">
+                    <input class="plan-choice__input" id="plan-free" type="radio" name="subscription" value="free" required>
+                    <span class="plan-choice__surface plan-card plan-card--free">
+                      <span class="plan-choice__copy">
+                        <span class="plan-choice__title">RAÍZ</span>
+                        <span class="plan-price">0€ / mes</span>
+                        <ul>
+                          <li>10% en tu primera compra</li>
+                          <li>Acceso a talleres y contenidos introductorios</li>
+                          <li>Inspiración creativa mensual</li>
+                        </ul>
+                      </span>
+                      <span class="plan-button plan-button--choice">Empezar desde la raíz</span>
+                    </span>
+                  </label>
+
+                  <label class="plan-choice">
+                    <input class="plan-choice__input" id="plan-plus" type="radio" name="subscription" value="plus">
+                    <span class="plan-choice__surface plan-card plan-card--plus">
+                      <span class="plan-badge">Popular</span>
+                      <span class="plan-choice__copy">
+                        <span class="plan-choice__title">BROTE</span>
+                        <span class="plan-price">12€ / mes</span>
+                        <ul>
+                          <li>Acceso prioritario a talleres destacados</li>
+                          <li>Recursos creativos semanales</li>
+                          <li>Pack sorpresa Esencia Amara, con detalles creativos y pequeños objetos de la marca</li>
+                        </ul>
+                      </span>
+                      <span class="plan-button plan-button--choice">Hacer crecer mi proceso</span>
+                    </span>
+                  </label>
+
+                  <label class="plan-choice">
+                    <input class="plan-choice__input" id="plan-premium" type="radio" name="subscription" value="premium">
+                    <span class="plan-choice__surface plan-card plan-card--premium">
+                      <span class="plan-choice__copy">
+                        <span class="plan-choice__title">FLOR</span>
+                        <span class="plan-price">25€ / mes</span>
+                        <ul>
+                          <li>Acceso completo a todos los talleres y recursos</li>
+                          <li>Prioridad en lanzamientos, plazas y experiencias especiales</li>
+                          <li>Pack de bienvenida Club Amara, con tarjeta de filiación y detalles exclusivos</li>
+                        </ul>
+                      </span>
+                      <span class="plan-button plan-button--choice">Florecer con Amara</span>
+                    </span>
+                  </label>
+                </div>
               </fieldset>
 
   
@@ -110,46 +147,7 @@
       </article>
     </section>
 
-    <section class="planes" aria-label="Planes de membresía">
-      <h2>Planes de registro</h2>
-      <p class="planes-subtitle">¡Forma parte de nustra familia!</p>
-
-      <div class="planes-grid">
-        <article class="plan-card plan-card--free">
-          <h3>RAÍZ</h3>
-          <p class="plan-price">0€ / mes</p>
-          <ul>
-            <li>10% en tu primera compra</li>
-            <li>Acceso a talleres y contenidos introductorios</li>
-            <li>Inspiración creativa mensual</li>
-          </ul>
-          <a href="#" class="plan-button">Empezar desde la raíz</a>
-        </article>
-
-        <article class="plan-card plan-card--plus">
-          <span class="plan-badge">Popular</span>
-          <h3>BROTE</h3>
-          <p class="plan-price">12€ / mes</p>
-          <ul>
-            <li>Acceso prioritario a talleres destacados</li>
-            <li>Recursos creativos semanales</li>
-            <li>Pack sorpresa Esencia Amara, con detalles creativos y pequeños objetos de la marca</li>
-          </ul>
-          <a href="#" class="plan-button">Hacer crecer mi proceso</a>
-        </article>
-
-        <article class="plan-card plan-card--premium">
-          <h3>FLOR</h3>
-          <p class="plan-price">25€ / mes</p>
-          <ul>
-            <li>Acceso completo a todos los talleres y recursos</li>
-            <li>Prioridad en lanzamientos, plazas y experiencias especiales</li>
-            <li>Pack de bienvenida Club Amara, con tarjeta de filiación y detalles exclusivos</li>
-          </ul>
-          <a href="#" class="plan-button">Florecer con Amara</a>
-        </article>
-      </div>
-    </section>
+    
   </main>
   
 
