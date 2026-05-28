@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const activePanel = panels.find((panel) => panel.classList.contains("is-active"));
     if (!activePanel) return;
 
-    authPanels.style.height = `${activePanel.scrollHeight}px`;
+    authPanels.style.height = `${activePanel.offsetHeight}px`;
   };
 
   const activate = (target) => {

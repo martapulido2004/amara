@@ -195,7 +195,7 @@ body {
 
 .auth-panels {
   position: relative;
-  min-height: 330px;
+  min-height: 0;
   transition: height 0.42s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -214,6 +214,8 @@ body {
 }
 
 .auth-panel.is-active {
+  position: relative;
+  inset: auto;
   opacity: 1;
   pointer-events: auto;
   visibility: visible;
@@ -425,7 +427,7 @@ body {
   }
 
   .auth-panels {
-    min-height: 400px;
+    min-height: 0;
   }
 
   .auth-two-cols {
