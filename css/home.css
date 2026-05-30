@@ -155,6 +155,224 @@ body {
   margin-bottom: 0;
 }
 
+/* Sección editorial sobre creatividad y cuidado */
+.amara-care {
+  position: relative;
+  overflow: hidden;
+  padding: 112px 90px 104px;
+  background:
+    linear-gradient(rgba(249, 241, 231, 0.72), rgba(247, 232, 238, 0.78)),
+    url("../img/fondos/fondo2.jpg") center/cover no-repeat;
+  color: #594452;
+}
+
+.amara-care__inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.amara-care__intro {
+  max-width: 760px;
+  margin: 0 auto 58px;
+  text-align: center;
+}
+
+.amara-care__eyebrow {
+  margin: 0 0 12px;
+  color: #a26380;
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+}
+
+.amara-care__intro h2 {
+  margin: 0 0 22px;
+  color: var(--brand-fucsia);
+  font-family: "Gochi Hand", cursive;
+  font-size: clamp(42px, 5vw, 78px);
+  font-weight: 700;
+  line-height: 0.98;
+}
+
+.amara-care__intro p {
+  margin: 0;
+  color: var(--brand-celeste);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.65;
+}
+
+.amara-care__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.amara-care__card {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+  padding: 150px 34px 34px;
+  border: 1px solid rgba(121, 87, 87, 0.12);
+  border-radius: 34px;
+  background: rgba(255, 252, 247, 0.72);
+  box-shadow: 0 22px 50px rgba(100, 72, 84, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.amara-care__card::before {
+  content: "";
+  position: absolute;
+  right: -50px;
+  bottom: -58px;
+  width: 190px;
+  height: 172px;
+  border-radius: 52% 48% 42% 58% / 44% 62% 38% 56%;
+  background: var(--amara-care-accent, rgba(236, 181, 212, 0.3));
+  opacity: 0.34;
+  transform: scale(0.78) rotate(-10deg);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.amara-care__card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(111, 77, 96, 0.22);
+  box-shadow: 0 30px 70px rgba(100, 72, 84, 0.16);
+}
+
+.amara-care__card:hover::before {
+  opacity: 0.64;
+  transform: scale(1.08) rotate(8deg);
+}
+
+.amara-care__card--rose {
+  --amara-care-accent: rgba(236, 181, 212, 0.46);
+  --amara-care-title: var(--brand-fucsia);
+}
+
+.amara-care__card--sand {
+  --amara-care-accent: rgba(235, 220, 134, 0.42);
+  --amara-care-title: var(--brand-naranja);
+}
+
+.amara-care__card--sage {
+  --amara-care-accent: rgba(107, 174, 224, 0.42);
+  --amara-care-title: var(--brand-celeste);
+}
+
+.amara-care__card--sky {
+  --amara-care-accent: rgba(236, 181, 212, 0.42);
+  --amara-care-title: var(--brand-rosa-claro);
+}
+
+.amara-care__symbol {
+  position: absolute;
+  z-index: 1;
+  top: 24px;
+  right: 26px;
+  width: min(118px, 24%);
+  max-height: 118px;
+  object-fit: contain;
+  transform: rotate(0deg) scale(1);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
+.amara-care__card:hover .amara-care__symbol {
+  transform: rotate(-9deg) scale(1.18);
+}
+
+.amara-care__card h3,
+.amara-care__card p {
+  position: relative;
+  z-index: 1;
+}
+
+.amara-care__card h3 {
+  margin: 0 0 14px;
+  color: var(--amara-care-title, #704f64);
+  font-family: "Gochi Hand", cursive;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.02;
+}
+
+.amara-care__card p {
+  max-width: 460px;
+  margin: 0;
+  color: #5f5550;
+  font-family: Helvetica, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.amara-care__closing {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 52px;
+  text-align: center;
+}
+
+.amara-care__closing p {
+  margin: 0;
+  color: #704f64;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(27px, 3vw, 42px);
+  line-height: 1.1;
+}
+
+.amara-care__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 24px;
+  border: 1px solid rgba(111, 77, 96, 0.2);
+  border-radius: 999px;
+  background: #fffaf5;
+  color: #704f64;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 14px 28px rgba(100, 72, 84, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.amara-care__button:hover,
+.amara-care__button:focus-visible {
+  transform: translateY(-3px);
+  background: #fff;
+  box-shadow: 0 18px 36px rgba(100, 72, 84, 0.16);
+}
+
+.amara-care__button:focus-visible {
+  outline: 3px solid rgba(172, 219, 230, 0.85);
+  outline-offset: 4px;
+}
+
+[data-amara-care-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+[data-amara-care-reveal].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-amara-care-reveal].amara-care__card.is-visible:hover {
+  transform: translateY(-8px);
+}
+
 .topics {
   padding: 84px 90px;
   background: #f6f1e4;
@@ -431,13 +649,37 @@ body {
     line-height: 1;
   }
 
+  .amara-care {
+    padding: 78px 28px 82px;
+  }
 
-.topics,
+  .amara-care__intro {
+    margin-bottom: 42px;
+  }
+
+  .amara-care__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .amara-care__card {
+    min-height: 250px;
+    padding: 126px 26px 26px;
+    border-radius: 28px;
+  }
+
+  .amara-care__closing {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .topics,
   .multimedia,
   .experiencias-usuarios {
     padding: 64px 28px 72px;
   }
-.registro-descuento {
+
+  .registro-descuento {
     padding: 56px 20px;
   }
 
@@ -474,120 +716,48 @@ body {
     height: 300px;
   }
 }
-.emotion-circle {
-  padding: 88px 90px 92px;
-  background: linear-gradient(160deg, #f9f2ea 0%, #f4e7ef 45%, #efe9df 100%);
-}
 
-.emotion-circle__heading {
-  max-width: 780px;
-  margin: 0 auto 48px;
-  text-align: center;
-}
-
-.emotion-circle__heading h2 {
-  margin: 0 0 14px;
-  color: #6f4a68;
-  font-size: clamp(34px, 4.4vw, 56px);
-  line-height: 1.05;
-}
-
-.emotion-circle__heading p {
-  margin: 0;
-  color: #514947;
-  font-family: "Inter", Arial, sans-serif;
-  font-size: 19px;
-  line-height: 1.5;
-}
-
-.emotion-wheel {
-  position: relative;
-  max-width: 900px;
-  min-height: 680px;
-  margin: 0 auto;
-}
-
-.emotion-wheel__center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 270px;
-  height: 270px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f7ece7 75%);
-  border: 2px solid rgba(177, 140, 132, 0.35);
-  box-shadow: 0 16px 35px rgba(111, 74, 104, 0.13);
-  display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 30px;
-}
-
-.emotion-wheel__center p {
-  margin: 0;
-  color: #6c4e60;
-  font-family: "Playfair Display", serif;
-  font-size: clamp(28px, 2.4vw, 36px);
-  line-height: 1.2;
-}
-
-.emotion-item {
-  position: absolute;
-  width: min(240px, 28vw);
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(2px);
-  border: 1px solid rgba(164, 137, 131, 0.25);
-  border-radius: 16px;
-  padding: 14px 14px 13px;
-  box-shadow: 0 8px 22px rgba(109, 77, 87, 0.12);
-}
-
-.emotion-item h3 {
-  margin: 0 0 4px;
-  color: #7f4f68;
-  font-size: 28px;
-  line-height: 1;
-}
-
-.emotion-item p {
-  margin: 0;
-  font-family: "Inter", Arial, sans-serif;
-  color: #3f3a38;
-  font-size: 16px;
-  line-height: 1.35;
-}
-
-.emotion-item--1 { left: 8%; top: 6%; }
-.emotion-item--2 { left: 0; top: 36%; }
-.emotion-item--3 { left: 10%; bottom: 8%; }
-.emotion-item--4 { left: 50%; bottom: 0; transform: translateX(-50%); }
-.emotion-item--5 { right: 10%; bottom: 8%; }
-.emotion-item--6 { right: 0; top: 36%; }
-.emotion-item--7 { right: 8%; top: 6%; }
-
-@media (max-width: 900px) {
-  .emotion-circle {
-    padding: 64px 28px 70px;
+@media (max-width: 640px) {
+  .amara-care {
+    padding: 66px 20px 72px;
   }
 
-  .emotion-wheel {
+  .amara-care__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amara-care__card {
     min-height: auto;
-    display: grid;
-    gap: 14px;
+    padding: 112px 24px 24px;
   }
 
-  .emotion-wheel__center,
-  .emotion-item {
-    position: static;
-    width: 100%;
+  .amara-care__symbol {
+    top: 22px;
+    right: 22px;
+    width: 88px;
+    max-height: 88px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amara-care__card,
+  .amara-care__card::before,
+  .amara-care__symbol,
+  .amara-care__button,
+  [data-amara-care-reveal] {
+    transition: none;
+  }
+
+  [data-amara-care-reveal] {
+    opacity: 1;
     transform: none;
   }
 
-  .emotion-wheel__center {
-    order: -1;
-    height: auto;
-    min-height: 180px;
-    border-radius: 24px;
+  [data-amara-care-reveal].amara-care__card.is-visible:hover {
+    transform: none;
+  }
+
+  .amara-care__card:hover .amara-care__symbol {
+    transform: none;
   }
 }

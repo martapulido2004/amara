@@ -104,3 +104,27 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const revealItems = Array.from(document.querySelectorAll("[data-amara-care-reveal]"));
+  if (!revealItems.length) return;
+
+  // Activa una entrada suave para la sección de cuidado creativo del home.
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.22 }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+});
