@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const revealItems = Array.from(document.querySelectorAll("[data-amara-care-reveal]"));
+  const revealItems = Array.from(document.querySelectorAll("[data-amara-care-reveal], [data-home-reveal]"));
   if (!revealItems.length) return;
 
   // Activa una entrada suave para la sección de cuidado creativo del home.
