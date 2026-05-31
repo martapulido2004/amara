@@ -448,10 +448,9 @@ body {
   min-height: 34px;
   margin: 0 0 18px;
   padding: 0 16px;
-  border: 1px solid rgba(140, 89, 69, 0.18);
   border-radius: 999px;
-  background: #fff7ef;
-  color: #9a5d51;
+  background: var(--brand-celeste);
+  color: white;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
   font-weight: 800;
@@ -619,10 +618,7 @@ body {
   align-items: center;
   min-height: 42px;
   padding: 0 16px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 999px;
-  background: rgba(255, 250, 245, 0.74);
-  color: #744f45;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: 800;
@@ -631,11 +627,15 @@ body {
 }
 
 .featured-retreat__note--top {
+  background: var(--brand-fucsia);
+  color: var(--brand-rosa-claro);
   left: 22px;
   top: 22px;
 }
 
 .featured-retreat__note--bottom {
+  background: var(--brand-celeste);
+  color: var(--brand-celeste-claro);
   right: 22px;
   bottom: 22px;
 }
