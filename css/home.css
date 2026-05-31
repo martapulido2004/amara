@@ -624,6 +624,7 @@ body {
   font-weight: 800;
   backdrop-filter: blur(10px);
   box-shadow: 0 12px 30px rgba(64, 40, 34, 0.14);
+  animation: retreat-note-float 4.8s ease-in-out infinite;
 }
 
 .featured-retreat__note--top {
@@ -638,6 +639,17 @@ body {
   color: var(--brand-celeste-claro);
   right: 22px;
   bottom: 22px;
+  animation-delay: -2.2s;
+}
+
+@keyframes retreat-note-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(-1.4deg);
+  }
 }
 
 [data-home-reveal] {
@@ -1095,9 +1107,11 @@ body {
   .amara-care__button,
   .featured-retreat__button,
   .featured-retreat__visual img,
+  .featured-retreat__note,
   [data-amara-care-reveal],
   [data-home-reveal] {
     transition: none;
+    animation: none;
   }
 
   [data-amara-care-reveal],
