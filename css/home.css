@@ -155,7 +155,7 @@ body {
   margin-bottom: 0;
 }
 
-/* Sección editorial sobre creatividad y cuidado */
+
 .amara-care {
   position: relative;
   overflow: hidden;
@@ -182,7 +182,7 @@ body {
 
 .amara-care__eyebrow {
   margin: 0 0 12px;
-  color: #a26380;
+  color: var(--brand-celeste);
   font-family: Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 800;
@@ -463,8 +463,8 @@ body {
 .featured-retreat h2 {
   max-width: 720px;
   margin: 0;
-  color: #7b4863;
-  font-family: "Playfair Display", Georgia, serif;
+  color: var(--brand-rosa-claro);
+  font-family: "Gochi Hand", cursive;
   font-size: clamp(40px, 5vw, 76px);
   font-weight: 700;
   line-height: 0.98;
@@ -517,7 +517,7 @@ body {
 .featured-retreat__quote {
   margin: 30px 0 0;
   color: #a4507a;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Gochi Hand", cursive;
   font-size: clamp(24px, 2.6vw, 36px);
   line-height: 1.15;
 }
@@ -610,19 +610,6 @@ body {
 .featured-retreat__card:hover .featured-retreat__visual img {
   transform: scale(1.04);
   filter: saturate(1.02) contrast(0.98);
-}
-
-.featured-retreat__spiral {
-  position: absolute;
-  right: 22px;
-  top: 22px;
-  width: 96px;
-  height: 96px;
-  fill: none;
-  stroke: rgba(255, 250, 245, 0.78);
-  stroke-width: 5;
-  stroke-linecap: round;
-  z-index: 2;
 }
 
 .featured-retreat__note {
@@ -1068,11 +1055,6 @@ body {
 
   .featured-retreat__visual img {
     min-height: 300px;
-  }
-
-  .featured-retreat__spiral {
-    width: 72px;
-    height: 72px;
   }
 
   .featured-retreat__note {
