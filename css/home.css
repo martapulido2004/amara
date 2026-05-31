@@ -160,7 +160,7 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  padding: 112px 90px 148px;
+  padding: 112px 90px 190px;
   background:
     linear-gradient(rgba(249, 241, 231, 0.72), rgba(247, 232, 238, 0.78)),
     url("../img/fondos/fondo2.jpg") center/cover no-repeat;
@@ -191,20 +191,12 @@ body {
 }
 
 .amara-care__intro h2 {
-  margin: 0 0 22px;
+  margin: 0;
   color: var(--brand-fucsia);
   font-family: "Gochi Hand", cursive;
   font-size: clamp(42px, 5vw, 78px);
   font-weight: 700;
   line-height: 0.98;
-}
-
-.amara-care__intro p {
-  margin: 0;
-  color: var(--brand-celeste);
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: clamp(17px, 1.5vw, 21px);
-  line-height: 1.65;
 }
 
 .amara-care__grid {
@@ -378,36 +370,32 @@ body {
   position: relative;
   z-index: 2;
   overflow: hidden;
-  margin-top: -152px;
-  margin-bottom: -132px;
-  padding: 248px 90px 224px;
+  margin-top: -183px;
+  margin-bottom: -205px;
+  padding: 272px 90px 222px;
   background:
     linear-gradient(135deg, rgba(255, 248, 238, 0.42), rgba(244, 216, 214, 0.22)),
     url("../img/fondos/fondo3.jpg") center/cover no-repeat;
   color: #4f3b36;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M0 96C120 66 240 126 360 96C480 66 600 66 720 96C840 126 960 126 1080 96C1200 66 1320 66 1440 96V884C1320 914 1200 854 1080 884C960 914 840 914 720 884C600 854 480 854 360 884C240 914 120 914 0 884V96Z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M0 96C120 66 240 126 360 96C480 66 600 66 720 96C840 126 960 126 1080 96C1200 66 1320 66 1440 96V884C1320 914 1200 854 1080 884C960 914 840 914 720 884C600 854 480 854 360 884C240 914 120 914 0 884V96Z'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M0 104C130 140 260 132 390 92C560 40 690 82 820 108C980 146 1120 70 1260 86C1340 92 1400 118 1440 94V872C1300 842 1180 918 1020 884C860 850 740 850 580 884C420 918 280 842 140 876C70 894 30 902 0 890V104Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M0 104C130 140 260 132 390 92C560 40 690 82 820 108C980 146 1120 70 1260 86C1340 92 1400 118 1440 94V872C1300 842 1180 918 1020 884C860 850 740 850 580 884C420 918 280 842 140 876C70 894 30 902 0 890V104Z'/%3E%3C/svg%3E");
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
-}
-
-.featured-retreat::before,
-.featured-retreat::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  height: 92px;
-  pointer-events: none;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
 .featured-retreat::before {
-  display: none;
-}
-
-.featured-retreat::after {
-  display: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 20% 13%, rgba(255, 242, 196, 0.22), transparent 31%),
+    radial-gradient(circle at 80% 10%, rgba(212, 165, 194, 0.18), transparent 28%),
+    linear-gradient(180deg, rgba(255, 246, 235, 0.2), rgba(255, 246, 235, 0) 30%, rgba(255, 246, 235, 0.16));
+  mix-blend-mode: soft-light;
+  pointer-events: none;
 }
 
 .featured-retreat__card {
@@ -677,7 +665,9 @@ body {
 }
 
 .topics {
-  padding: 84px 90px;
+  position: relative;
+  z-index: 1;
+  padding: 240px 90px 84px;
   background: #f6f1e4;
 }
 
@@ -953,7 +943,7 @@ body {
   }
 
   .amara-care {
-    padding: 78px 28px 118px;
+    padding: 78px 28px 156px;
   }
 
   .amara-care__intro {
@@ -984,10 +974,14 @@ body {
   }
 
   .featured-retreat {
-    margin-top: -128px;
-    margin-bottom: -112px;
-    padding-top: 214px;
-    padding-bottom: 202px;
+    margin-top: -136px;
+    margin-bottom: -142px;
+    padding-top: 218px;
+    padding-bottom: 182px;
+  }
+
+  .topics {
+    padding-top: 186px;
   }
 
   .featured-retreat__card {
@@ -1050,18 +1044,17 @@ body {
 
 @media (max-width: 640px) {
   .amara-care {
-    padding: 66px 20px 98px;
+    padding: 66px 20px 130px;
   }
 
   .featured-retreat {
     margin-top: -108px;
-    margin-bottom: -96px;
-    padding: 184px 18px 170px;
+    margin-bottom: -116px;
+    padding: 178px 18px 148px;
   }
 
-  .featured-retreat::before,
-  .featured-retreat::after {
-    height: 72px;
+  .topics {
+    padding-top: 156px;
   }
 
   .featured-retreat__card {
