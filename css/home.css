@@ -375,7 +375,7 @@ body {
   padding: 272px 90px 222px;
   background:
     linear-gradient(135deg, rgba(255, 248, 238, 0.42), rgba(244, 216, 214, 0.22)),
-    url("../img/fondos/fondo3.jpg") center/cover no-repeat;
+    url("../img/fondos/fondo4.jpeg") center/cover no-repeat;
   color: #4f3b36;
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M0 104C130 140 260 132 390 92C560 40 690 82 820 108C980 146 1120 70 1260 86C1340 92 1400 118 1440 94V872C1300 842 1180 918 1020 884C860 850 740 850 580 884C420 918 280 842 140 876C70 894 30 902 0 890V104Z'/%3E%3C/svg%3E");
   mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 1000' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='black' d='M0 104C130 140 260 132 390 92C560 40 690 82 820 108C980 146 1120 70 1260 86C1340 92 1400 118 1440 94V872C1300 842 1180 918 1020 884C860 850 740 850 580 884C420 918 280 842 140 876C70 894 30 902 0 890V104Z'/%3E%3C/svg%3E");
@@ -835,39 +835,65 @@ body {
 }
 
 .registro-descuento {
-  padding: 72px 24px;
-  background: #e8b6cf;
+  position: relative;
+  overflow: hidden;
+  padding: 92px 24px;
+  background: #fff1e5;
+}
+
+.registro-descuento::before {
+  content: "";
+  position: absolute;
+  inset: -70px;
+  background-image: url("../img/simbolos/flor.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 172px 172px;
+  opacity: 0.58;
+  pointer-events: none;
 }
 
 .registro-descuento__contenido {
-  max-width: 760px;
+  position: relative;
+  z-index: 1;
+  max-width: 740px;
   margin: 0 auto;
+  padding: 44px 54px;
+  border-radius: 8px;
+  background: #f4cfd5;
+  box-shadow: 0 22px 54px rgba(70, 64, 37, 0.16);
   text-align: center;
 }
 
 .registro-descuento h2 {
-  margin: 0 0 14px;
-  color: #121212;
-  font-size: clamp(34px, 4vw, 54px);
-  line-height: 1.1;
+  margin: 0 0 18px;
+  color: var(--brand-fucsia);
+  font-family: "Gochi Hand", cursive;
+  font-size: clamp(24px, 3vw, 38px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.12;
+  text-transform: uppercase;
 }
 
 .registro-descuento p {
-  margin: 0 0 28px;
-  font-size: 24px;
-  color: #242424;
+  max-width: 640px;
+  margin: 0 auto 26px;
+  color: var(--brand-celeste);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.6;
 }
 
 .registro-descuento__formulario {
-  display: grid;
-  gap: 14px;
+  display: flex;
+  justify-content: center;
 }
 
 .registro-descuento__formulario input,
 .registro-descuento__formulario button {
-  width: 100%;
-  min-height: 62px;
-  border-radius: 10px;
+  min-height: 44px;
+  border-radius: 999px;
   border: 0;
   font-family: inherit;
 }
@@ -879,12 +905,28 @@ body {
 }
 
 .registro-descuento__formulario button {
-  background: #101010;
-  color: #fff;
-  font-size: 38px;
-  font-weight: 700;
+  padding: 0 28px;
+  background: var(--brand-fucsia);
+  color: var(--brand-rosa-claro);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
+  box-shadow: 0 10px 24px rgba(83, 80, 42, 0.18);
+  transition: transform 0.24s ease, background-color 0.24s ease, box-shadow 0.24s ease;
+}
+
+.registro-descuento__formulario button:hover,
+.registro-descuento__formulario button:focus-visible {
+  background: var(--brand-celeste);
+  box-shadow: 0 14px 28px rgba(83, 80, 42, 0.22);
+  transform: translateY(-2px);
+}
+
+.registro-descuento__formulario button:focus-visible {
+  outline: 3px solid rgba(255, 248, 236, 0.88);
+  outline-offset: 4px;
 }
 
 .sr-only {
@@ -1046,19 +1088,24 @@ body {
   }
 
   .registro-descuento {
-    padding: 56px 20px;
+    padding: 70px 20px;
+  }
+
+  .registro-descuento::before {
+    background-size: 138px 138px;
+  }
+
+  .registro-descuento__contenido {
+    padding: 34px 26px;
   }
 
   .registro-descuento p {
-    font-size: 20px;
-  }
-
-  .registro-descuento__formulario input {
-    font-size: 22px;
+    font-size: 15px;
   }
 
   .registro-descuento__formulario button {
-    font-size: 28px;
+    min-height: 42px;
+    font-size: 11px;
   }
   .topics__grid {
     grid-template-columns: 1fr;

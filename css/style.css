@@ -127,7 +127,7 @@
   background:
     radial-gradient(circle at top left, rgba(244, 168, 208, 0.32), transparent 28%),
     radial-gradient(circle at top right, rgba(129, 203, 209, 0.28), transparent 30%),
-    linear-gradient(135deg, #5f3d78 0%, #8a4e8c 45%, #d17d97 100%);
+    linear-gradient(135deg, #a75695 0%, #b58244 45%, #ccca67 100%);
 }
 
 .site-footer--flush {
