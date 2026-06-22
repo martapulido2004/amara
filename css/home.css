@@ -763,63 +763,74 @@ body {
 }
 
 .experiencias-usuarios {
-  padding: 84px 90px;
-  background: #f8f2e8;
+  padding: 72px 56px 86px;
+  background: var(--brand-rosa-claro);
 }
 
 .experiencias-usuarios__encabezado {
   max-width: 900px;
-  margin-bottom: 34px;
+  margin: 0 auto 34px;
+  text-align: center;
 }
+
+
 
 .experiencias-usuarios__encabezado h2 {
   margin: 0;
-  color: #6e3d7a;
-  font-size: clamp(30px, 4vw, 52px);
+  color: var(--amarillo-logo-amara);
+  font-family: "Gochi Hand", cursive;
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 400;
   line-height: 1.08;
 }
 
 .experiencias-usuarios__grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap: 18px;
+  align-items: stretch;
 }
 
 .testimonio-card {
-  background: #fff;
-  border-radius: 20px;
+  background: #f4d7dc;
+  border: 1px solid rgba(255, 250, 245, 0.45);
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 12px 26px rgba(82, 48, 91, 0.13);
-}
-
-.testimonio-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
+  box-shadow: 0 12px 24px rgba(22, 35, 15, 0.18);
 }
 
 .testimonio-card__contenido {
-  padding: 20px;
+  display: flex;
+  min-height: 172px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px 16px;
+  text-align: center;
 }
 
-.testimonio-card__contenido h3 {
+.testimonio-card__stars {
   margin: 0 0 10px;
-  color: #9c4e90;
-  font-size: 28px;
-  line-height: 1.1;
+  color: #3d2c26;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  letter-spacing: 2px;
+  line-height: 1;
 }
 
-.testimonio-card__contenido p {
-  margin: 0 0 12px;
-  color: #2f2f2f;
-  font-size: 19px;
+.testimonio-card__contenido p:not(.testimonio-card__stars) {
+  margin: 0;
+  color: #3f322e;
+  font-size: 13px;
   line-height: 1.35;
   font-family: Helvetica, Arial, sans-serif;
 }
 
 .testimonio-card__contenido span {
-  color: #5f5f5f;
+  display: block;
+  margin-top: 14px;
+  color: #4e3a34;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -991,6 +1002,10 @@ body {
   .multimedia,
   .experiencias-usuarios {
     padding: 64px 28px 72px;
+  }
+
+  .experiencias-usuarios__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .featured-retreat {
