@@ -184,7 +184,7 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
 }
 
 .categorias-full .eyebrow {
-  color: var(--brand-fucsia);
+  color: var(--brand-celeste);
 }
 
 .categorias-full .section-head h2 {
@@ -351,14 +351,14 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
 }
 
 .kits-showcase .eyebrow {
-  color: var(--brand-fucsia);
+  color: var(--brand-celeste-claro);
   font-weight: 800;
 }
 
 .kits-showcase h2 {
   max-width: 920px;
   color: var(--brand-fucsia);
-  font-family: "Gochi Hand", cursive;;
+  font-family: "Gochi Hand", cursive;
   font-size: clamp(2.8rem, 6vw, 5.4rem);
   font-weight: 500;
   line-height: 0.95;
@@ -577,15 +577,14 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
 }
 
 .online-workshops .eyebrow {
-  color: var(--brand-celeste);
+  color: #4f0f28;
   font-weight: 800;
 }
 
 .online-workshops h2 {
   max-width: 760px;
-  color: var(--brand-fucsia);
-  font-family: var(--font-gochi);
-  font-weight: 400;
+  color: #4f0f28;
+  font-family: "Bitter", serif;
   font-size: clamp(2.2rem, 4.8vw, 4.4rem);
   line-height: .95;
 }
@@ -772,6 +771,161 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
   outline-offset: 4px;
 }
 
+.retreat-feature {
+  padding: clamp(1.4rem, 3vw, 2.4rem) 0;
+}
+
+.retreat-feature__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .72fr);
+  gap: clamp(.9rem, 2vw, 1.8rem) clamp(1.2rem, 3vw, 2.5rem);
+  align-items: start;
+  min-height: clamp(420px, 44vw, 540px);
+  padding: clamp(1.35rem, 3vw, 2.4rem);
+  border: 1px solid rgba(255, 255, 255, .72);
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, rgba(255, 250, 243, .88) 0%, rgba(255, 250, 243, .68) 46%, rgba(255, 250, 243, .4) 100%),
+    url("../img/carruasel/10.jpg") center 44% / cover no-repeat;
+  box-shadow: 0 18px 40px rgba(79, 59, 54, .12);
+}
+
+.retreat-feature__intro,
+.retreat-feature__content {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.retreat-feature__label {
+  display: inline-flex;
+  width: fit-content;
+  margin: 0 0 .65rem;
+  padding: .5rem .95rem;
+  border-radius: 999px;
+  background: var(--brand-celeste);
+  color: #fffaf3;
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.retreat-feature h2 {
+  max-width: 10ch;
+  color: var(--brand-fucsia);
+  font-family: var(--font-gochi);
+  font-size: clamp(2.8rem, 5.2vw, 4.9rem);
+  font-weight: 400;
+  line-height: .84;
+}
+
+.retreat-feature__subtitle {
+  max-width: 30ch;
+  margin: .9rem 0 0;
+  color: var(--brand-celeste);
+  font-size: clamp(1rem, 1.55vw, 1.3rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.retreat-feature__content {
+  align-self: end;
+  display: grid;
+  gap: .5rem;
+  margin-top: clamp(.9rem, 1.8vw, 1.25rem);
+}
+
+.retreat-feature__content p {
+  max-width: 54ch;
+  margin: 0;
+  color: #4f3b36;
+  font-size: .88rem;
+  line-height: 1.5;
+}
+
+.retreat-feature__aside {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: grid;
+  gap: .85rem;
+  align-self: center;
+  align-content: center;
+  justify-items: start;
+}
+
+.retreat-feature__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.retreat-feature__pills li {
+  padding: .42rem .78rem;
+  border-radius: 999px;
+  background: rgba(255, 250, 243, .92);
+  color: var(--brand-celeste);
+  box-shadow: 0 8px 18px rgba(79, 59, 54, .08);
+  font-size: .72rem;
+  font-weight: 900;
+}
+
+.retreat-feature__quote {
+  max-width: 24ch;
+  margin: 0;
+  color: var(--brand-fucsia);
+  font-family: var(--font-gochi);
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: .95;
+}
+
+.retreat-feature__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.retreat-feature__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 1.1rem;
+  border-radius: 999px;
+  color: #fff8ee;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .06em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform .24s ease, box-shadow .24s ease, background-color .24s ease;
+}
+
+.retreat-feature__button--primary {
+  background: var(--brand-fucsia);
+  box-shadow: 0 12px 24px rgba(212, 65, 144, .22);
+}
+
+.retreat-feature__button--secondary {
+  background: var(--brand-verde-claro);
+  color: var(--brand-fucsia);
+  box-shadow: 0 12px 24px rgba(114, 182, 43, .18);
+}
+
+.retreat-feature__button:hover,
+.retreat-feature__button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(79, 15, 40, .18);
+}
+
+.retreat-feature__button:focus-visible {
+  outline: 3px solid rgba(107, 174, 224, .65);
+  outline-offset: 4px;
+}
+
 .category-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -796,15 +950,57 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
   align-items: center;
 }
 
+.experience h2 {
+  color: var(--brand-celeste-claro);
+  font-family: var(--font-gochi);
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 400;
+  line-height: .9;
+  text-shadow: 0 2px 0 rgba(79, 59, 54, .16);
+}
+
 .experience img { min-height: 420px; border-radius: .7rem; }
 
 .launch {
-  background: linear-gradient(135deg, #f5ecdf 0%, #efe2d4 55%, #ead5d8 100%);
+  border: 0;
+  background: var(--brand-celeste-claro);
   text-align: center;
-  padding-block: clamp(2rem, 4vw, 3.3rem);
+  padding: clamp(2rem, 4vw, 3.3rem) clamp(1.4rem, 4vw, 3rem);
 }
 
-.launch p { margin: .8rem auto 1.2rem; max-width: 60ch; }
+.launch .eyebrow {
+  color: var(--brand-fucsia);
+  font-weight: 900;
+}
+
+.launch h2 {
+  color: var(--brand-celeste);
+  font-family: var(--font-gochi);
+  font-size: clamp(2.8rem, 5.4vw, 5rem);
+  font-weight: 400;
+  line-height: .9;
+}
+
+.launch p {
+  margin: .8rem auto 1.2rem;
+  max-width: 60ch;
+  color: #4f3b36;
+}
+
+.launch .btn-secondary {
+  border: 0;
+  background: var(--brand-rosa-claro);
+  color: var(--brand-fucsia);
+  box-shadow: 0 12px 24px rgba(212, 65, 144, .16);
+  font-weight: 900;
+}
+
+.launch .btn-secondary:hover,
+.launch .btn-secondary:focus-visible {
+  background: var(--brand-verde-claro);
+  color: var(--brand-fucsia);
+  transform: translateY(-2px);
+}
 
 @media (max-width: 1024px) {
 
@@ -830,6 +1026,25 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
 
   .kits-showcase .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .retreat-feature__card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    background:
+      linear-gradient(rgba(255, 250, 243, .86), rgba(255, 250, 243, .78)),
+      url("../img/carruasel/10.jpg") center / cover no-repeat;
+  }
+
+  .retreat-feature__intro,
+  .retreat-feature__content,
+  .retreat-feature__aside {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .retreat-feature h2 {
+    max-width: 10ch;
   }
 
   .hero {
