@@ -337,6 +337,203 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
   gap: 1.2rem;
 }
 
+.kits-showcase {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: clamp(3rem, 6vw, 5.6rem) clamp(1.4rem, 4vw, 4rem);
+  text-align: center;
+}
+
+.kits-showcase .section-head {
+  justify-items: center;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.kits-showcase .eyebrow {
+  color: var(--brand-fucsia);
+  font-weight: 800;
+}
+
+.kits-showcase h2 {
+  max-width: 920px;
+  color: var(--brand-fucsia);
+  font-family: "Gochi Hand", cursive;;
+  font-size: clamp(2.8rem, 6vw, 5.4rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.kits-showcase .section-intro {
+  max-width: 46ch;
+  margin: 0 auto;
+  color: #4f3b36;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.kits-showcase .product-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.kits-showcase .product-card {
+  position: relative;
+  --kit-card-bg: var(--brand-rosa-claro);
+  --kit-card-text: #4f0f28;
+  --kit-card-button: var(--brand-fucsia);
+  border: 0;
+  border-radius: 18px;
+  background: var(--kit-card-bg);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 18px;
+  box-shadow: 0 14px 30px rgba(79, 59, 54, 0.12);
+  text-align: center;
+  animation: kit-card-float 5.8s ease-in-out infinite;
+}
+
+.kits-showcase .product-card:nth-child(2) {
+  --kit-card-bg: var(--brand-celeste-claro);
+  --kit-card-text: #285d73;
+  --kit-card-button: var(--brand-celeste);
+  animation-delay: -1.4s;
+}
+
+.kits-showcase .product-card:nth-child(3) {
+  --kit-card-bg: var(--brand-verde-claro);
+  --kit-card-text: #40552c;
+  --kit-card-button: var(--brand-verde);
+  animation-delay: -2.8s;
+}
+
+@keyframes kit-card-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+.kits-showcase .product-card::before {
+  position: absolute;
+  z-index: 2;
+  top: -14px;
+  right: 16px;
+  display: inline-grid;
+  min-width: 62px;
+  min-height: 38px;
+  place-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--brand-celeste);
+  color: var(--brand-celeste-claro);
+  content: "calma";
+  font-family: var(--font-gochi);
+  font-size: 1rem;
+  line-height: 1;
+  transform: rotate(8deg);
+}
+
+.kits-showcase .product-card:nth-child(2)::before {
+  background: var(--brand-verde);
+  color: var(--brand-verde-claro);
+  content: "suelta";
+  transform: rotate(-7deg);
+}
+
+.kits-showcase .product-card:nth-child(3)::before {
+  background: transparent;
+  color: var(--brand-fucsia);
+  content: "fluye";
+  transform: rotate(6deg);
+}
+
+.kits-showcase .product-card img {
+  aspect-ratio: 1;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(79, 59, 54, 0.1);
+}
+
+.kits-showcase .product-info {
+  display: grid;
+  gap: .45rem;
+  padding: 1.1rem .4rem 0;
+  justify-items: center;
+}
+
+.kits-showcase .product-info h3 {
+  color: var(--kit-card-text);
+  font-family: var(--font-gochi);
+  font-size: clamp(2.1rem, 3.6vw, 3.2rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.kits-showcase .product-info h3 span {
+  display: block;
+  margin-top: .2rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .48em;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.kits-showcase .product-info p {
+  max-width: 28ch;
+  color: #4f3b36;
+  font-size: .9rem;
+  line-height: 1.35;
+}
+
+.kits-showcase .product-meta {
+  display: grid;
+  gap: .45rem;
+  justify-items: center;
+  padding-top: .2rem;
+  border-top: 0;
+}
+
+.kits-showcase .product-meta span {
+  color: var(--kit-card-text);
+  font-family: "Bitter", serif;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+
+.kits-showcase .product-meta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--kit-card-button);
+  color: #fff8ee;
+  box-shadow: 0 10px 22px rgba(79, 15, 40, 0.16);
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: none;
+  transition: transform .24s ease, background-color .24s ease, box-shadow .24s ease;
+}
+
+.kits-showcase .product-meta a:hover,
+.kits-showcase .product-meta a:focus-visible {
+  background: #4f0f28;
+  box-shadow: 0 14px 28px rgba(79, 15, 40, 0.2);
+  transform: translateY(-2px);
+}
+
+.kits-showcase .product-meta a:focus-visible {
+  outline: 3px solid rgba(236, 181, 212, 0.72);
+  outline-offset: 4px;
+}
+
 .product-card {
   background: var(--surface-soft);
   border: 1px solid #e7dbcf;
@@ -361,6 +558,219 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
 
 .product-meta span { font-size: .94rem; letter-spacing: .06em; }
 .product-meta a { color: var(--ink); text-decoration: none; font-size: .8rem; text-transform: uppercase; }
+
+.section.online-workshops {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  padding: clamp(3.2rem, 6vw, 5rem) clamp(1.4rem, 5vw, 4.5rem);
+  background: transparent;
+  background-color: transparent;
+  text-align: center;
+}
+
+.online-workshops .section-head {
+  justify-items: center;
+  gap: .55rem;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.online-workshops .eyebrow {
+  color: var(--brand-celeste);
+  font-weight: 800;
+}
+
+.online-workshops h2 {
+  max-width: 760px;
+  color: var(--brand-fucsia);
+  font-family: var(--font-gochi);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 4.8vw, 4.4rem);
+  line-height: .95;
+}
+
+.online-workshops .section-head p:not(.eyebrow) {
+  max-width: 68ch;
+  color: #4f3b36;
+  font-size: .98rem;
+  line-height: 1.55;
+}
+
+.online-workshops .product-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.1rem, 2.6vw, 1.8rem);
+  align-items: stretch;
+}
+
+.online-workshops .product-card {
+  position: relative;
+  display: flex;
+  min-height: 310px;
+  padding: clamp(1.3rem, 2.4vw, 1.7rem);
+  border: 2px solid rgba(79, 15, 40, .72);
+  border-radius: 14px;
+  background: #fffaf3;
+  box-shadow: 10px 12px 0 rgba(79, 15, 40, .1);
+  text-align: center;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+
+.online-workshops .product-card:hover {
+  transform: translateY(-6px) rotate(-.5deg);
+  box-shadow: 13px 16px 0 rgba(79, 15, 40, .12);
+}
+
+.online-workshops .product-card img {
+  display: none;
+}
+
+.online-workshops .product-card::before {
+  content: "arcilla";
+  position: absolute;
+  top: -18px;
+  left: 22px;
+  display: inline-grid;
+  min-width: 66px;
+  min-height: 46px;
+  place-items: center;
+  padding: .35rem .55rem;
+  border: 2px solid rgba(79, 15, 40, .72);
+  border-radius: 8px;
+  background: var(--brand-verde-claro);
+  color: #4f0f28;
+  font-family: var(--font-gochi);
+  font-size: 1rem;
+  line-height: 1;
+  transform: rotate(-9deg);
+}
+
+.online-workshops .product-card:nth-child(2)::before {
+  content: "escritura";
+  background: var(--brand-rosa-claro);
+  color: var(--brand-fucsia);
+  transform: rotate(8deg);
+}
+
+.online-workshops .product-card:nth-child(3)::before {
+  content: "pintura";
+  background: var(--brand-celeste);
+  color: #fffaf3;
+  transform: rotate(-7deg);
+}
+
+.online-workshops .product-info {
+  width: 100%;
+  min-height: 100%;
+  padding: 1.2rem .35rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: .9rem;
+}
+
+.online-workshops .product-info h3 {
+  color: var(--brand-fucsia);
+  font-family: var(--font-gochi);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 400;
+  line-height: .96;
+}
+
+.online-workshops .product-card:nth-child(2) .product-info h3 {
+  color: var(--brand-celeste);
+}
+
+.online-workshops .product-card:nth-child(3) .product-info h3 {
+  color: var(--brand-verde);
+}
+
+.online-workshops .product-info h3 span {
+  display: block;
+  margin-top: .25rem;
+  color: #4f0f28;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .48em;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.online-workshops .product-info h3::before {
+  content: "Taller online";
+  display: block;
+  margin-bottom: .55rem;
+  color: var(--brand-fucsia);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .42em;
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.online-workshops .product-info p {
+  max-width: 25ch;
+  color: #4f3b36;
+  font-size: .92rem;
+  line-height: 1.45;
+}
+
+.online-workshops .product-meta {
+  width: 100%;
+  padding-top: .75rem;
+  border-top: 0;
+  display: grid;
+  justify-items: center;
+  gap: .75rem;
+}
+
+.online-workshops .product-meta span {
+  color: #4f0f28;
+  font-family: "Bitter", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0;
+}
+
+.online-workshops .product-meta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--brand-fucsia);
+  color: #fff8ee;
+  box-shadow: 0 10px 22px rgba(79, 15, 40, 0.16);
+  font-size: .9rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-transform: none;
+  transition: transform .24s ease, background-color .24s ease, box-shadow .24s ease;
+}
+
+.online-workshops .product-card:nth-child(2) .product-meta a {
+  background: var(--brand-naranja);
+}
+
+.online-workshops .product-card:nth-child(3) .product-meta a {
+  background: var(--brand-verde);
+}
+
+.online-workshops .product-meta a:hover,
+.online-workshops .product-meta a:focus-visible {
+  background: #4f0f28;
+  box-shadow: 0 14px 28px rgba(79, 15, 40, 0.2);
+  transform: translateY(-2px);
+}
+
+.online-workshops .product-meta a:focus-visible {
+  outline: 3px solid rgba(236, 181, 212, 0.72);
+  outline-offset: 4px;
+}
 
 .category-grid {
   display: grid;
@@ -418,6 +828,10 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
     transform: none;
   }
 
+  .kits-showcase .product-grid {
+    grid-template-columns: 1fr;
+  }
+
   .hero {
     min-height: 100vh;
     background-position: 58% center;
@@ -428,7 +842,8 @@ h3 { margin: 0; font-size: 1.8rem; line-height: 1.05; }
   .category-card { grid-template-rows: 260px auto; }
 
 @media (prefers-reduced-motion: reduce) {
-  .categorias-full .category-card {
+  .categorias-full .category-card,
+  .kits-showcase .product-card {
     animation: none;
   }
 }
