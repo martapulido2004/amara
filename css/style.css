@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Gochi+Hand&display=swap");
 
 :root {
   --amarillo-logo-amara: #ebdc86;
@@ -10,6 +10,7 @@
   --brand-celeste: #6baee0;
   --brand-naranja: #f6a117;
   --brand-verde: #72b62b;
+  --font-gochi: "Gochi Hand", cursive;
 }
 
 .topbar {
